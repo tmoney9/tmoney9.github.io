@@ -39,7 +39,7 @@ body {
   line-height: 1;
   margin: 0;
   background: #fcfaf6;
-  color: #333333;
+  color: #333;
   padding-bottom: 8em;
 }
 
@@ -125,6 +125,8 @@ figcaption {
 
 .small {
   font-size: 1rem;
+  display: block;
+  color: #333;
 }
 
 .wrapper {
