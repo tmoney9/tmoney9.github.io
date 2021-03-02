@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane Fadden's 2021 Portfolio</title>
+    <link rel="stylesheet" href="css/style-min.css">
+
+</head>
+
+<body>
+    <svg style="display: none;" width="25" height="25" viewBox="0 0 25 25" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <symbol id="arrow">
+            <path d="M23.6735 13.2432L23.6735 10.8065L0.430663 10.8065L0.430664 13.2432L23.6735 13.2432Z"
+                fill="#8a8a93" />
+            <path d="M22.739 13.415L24.4307 11.6416L13.4477 0.127441L11.756 1.90092L22.739 13.415Z" fill="#8a8a93" />
+            <path d="M22.739 10.8398L24.4307 12.6133L13.4477 24.1274L11.756 22.354L22.739 10.8398Z" fill="#8a8a93" />
+        </symbol>
+    </svg>
+
+    <div class="container">
+        <header class="header">
+            <a href="index.html">Home</a>
+         </header>
+
+        <div class="case-study__cover">
+            <span class="type gradient-1">Case study</span>
+            <h1>A new information architecture (IA)</h1>
+            <p>A research driven revamp of the Co-op bank's mobile and web app information architecture.</p>
+        </div>
+
+        <section class="case-study">
+            <div class="case-study__intro">
+                <div class="intro__item">
+                    <h3>Overview</h3>
+                    <p>The bank's web and mobile apps historically functioned as separate product teams with little awareness of one
+                        another. Both had their own unique roadmap despite being the same product.</p>
+                    <p>The plan for 2020 was to redesign and re-platform the web app, with mobile coming shortly after. The UX team used
+                        this as an opportunity to align the IA and product strategy of both apps.</p>
+                </div>
+                <div class="intro__item">
+                    <h3>Team</h3>
+                    <p>Designer (me), 1 junior designer, 1 content designer, 1 ux researcher, 1 product owner.
+                    </p>
+                </div>
+                <div class="intro__item">
+                    <h3>Role</h3>
+                    <p>Team lead, user research, design, and project planning.</p>
+                </div>
+            </div>
+
+            <div class="case-study__body">
+                <h2>Problems</h2>
+                <p>The current web and mobile apps were a tangled mess of features and services. New features got built
+                    with little thought given to findability or organisation within the existing architecture.</p>
+                <p>To increase our understanding of the problem we ran some qualitative usability testing. We conducted
+                    a tree test to determine what areas of the navigation needed improvement. The team recruited 30
+                    participants for the test and used Userzoom to carry it out. This helped us establish a baseline for
+                    the IA on which to improve upon.</p>
+                <p>The test consisted of 10 tasks. Each task focused on a major feature or service within the app, for
+                    example: "Where would you go to remove a payee?".</p>
+                <p>Userzoom scored each task under various findability related metrics. The output was an overall
+                    effectiveness score for each task.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/existing-performance.png" alt="">
+            </div>
+            <p class="caption">Screenshot from Userzoom's tree test analysis. </p>
+
+            <div class="case-study__body">
+
+                <p>For the above example success was calculated at 38% with only around half of that being a direct success.
+                    Room for improvement.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/treejack-before.png" alt="">
+            </div>
+            <p class="caption">Screenshot of the results for all tasks for the initial IA. </p>
+
+            <div class="case-study__body">
+
+                <p>Overall results were a mixed bag. A few tasks performed relatively well, which we wanted to preserve. Others didn't do so well. </p>
+            </div>
+
+            <div class="case-study__body">
+
+                <h2>Building a better IA</h2>
+                <p>The team analysed the results of the tree test, and past usablity tests, and found some common themes.</p>
+                <ul>
+                    <li>Unclear top level categories lead many users down the wrong path.</li>
+                    <li>Similar or misleading categories that caused users to pick the wrong targets.</li>
+                    <li>Categories not where users expected them to be leading to frustration and failure.</li>
+                    <li>Unclear category labels that used terms that were unfamiliar to users.</li>
+                </ul>
+                <p>Following this analysis the team conducted an open card sort test. The aim was to understand how our users categorise and understand our products and services.</p>
+                <p>We asked 30 users to organise features from our app and put them into groups that made sense to them. </p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/card-sort.png" alt="">
+            </div>
+            <p class="caption">Results from the card sort. </p>
+
+            <div class="case-study__body">
+                <p>The result was a new IA that:</p>
+                <ul>
+                    <li>Brought clarity to our categories and labels by rewording them into commonly understood terms.</li>
+                    <li>Took a mobile first approach by reducing the number of top level categories.</li>
+                    <li>Rearranged categories into a flatter hierarchy making things easier to find.</li>
+                    <li>Elevated popular features in the IA reducing users time to complete a task.</li>
+                </ul>
+                <p>By reducing the hierarchy, users were able to find what they were looking for faster. A smaller global navigation meant users had less options to consider initially.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/sitemap.png" alt="">
+            </div>
+            <p class="caption">The new sitemap. </p>
+
+            <div class="case-study__body">
+                <h2>Measuring the results</h2>
+                <p>To measure the success (or failure) of the redesign, we conducted a second tree test using the new IA. We tweaked each task to include the new labels the content designer had come up with.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/treejack-after.png" alt="">
+            </div>
+            <p class="caption">A screenshot of the results for all tasks for the redesigned IA. </p>
+
+            <div class="case-study__body">
+                <p>The first tree test that we baselined had an average task success of 61%. The redesign had an average success of 87% across the same 10 tasks. On top of that, the new IA was far more capable at handling new features and services down the line.</p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>In closing</h2>
+                <p>The IA redesign turned out to be a success. We simplified the architecture of our web and mobile apps, increasing findability and consistency. Additionally, labels were more in line with our content guidelines and user expectation.</p>
+                <p>The approach we took, using both qualitative and quantitative methods, gave us a lot of confidence in the results and helped us push forward to the next stage of product development.</p>
+            </div>
+        </section>
+
+        <section class="work work__case-study">
+            <h2 class="home__heading">Next case study</h2>
+
+            <ul class="work__links">
+                <li><span class="type gradient-1">Case study</span>
+                    Building a design system for the Co-op Bank <span class="meta">A simplified
+                        account of creating a
+                        design system for the Co-op Bank. </span><a href="design-system.html"></a>
+                    
+                        <svg class="arrow" width="25" height="25">
+                            <use href="#arrow" />
+                        </svg></li>
+            </ul>
+        </section>
+
+        
+    </div>
+</body>
+
+</html>

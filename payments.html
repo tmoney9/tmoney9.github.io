@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane Fadden's 2021 Portfolio</title>
+    <link rel="stylesheet" href="css/style-min.css">
+
+</head>
+
+<body>
+    <svg style="display: none;" width="25" height="25" viewBox="0 0 25 25" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <symbol id="arrow">
+            <path d="M23.6735 13.2432L23.6735 10.8065L0.430663 10.8065L0.430664 13.2432L23.6735 13.2432Z"
+                fill="#8a8a93" />
+            <path d="M22.739 13.415L24.4307 11.6416L13.4477 0.127441L11.756 1.90092L22.739 13.415Z" fill="#8a8a93" />
+            <path d="M22.739 10.8398L24.4307 12.6133L13.4477 24.1274L11.756 22.354L22.739 10.8398Z" fill="#8a8a93" />
+        </symbol>
+    </svg>
+
+    <div class="container">
+        <header class="header">
+            <a href="index.html">Home</a>
+        </header>
+
+        <div class="case-study__cover">
+            <span class="type gradient-1">Case study</span>
+            <h1>Co-op Bank payments</h1>
+            <p>Payments gets over 800,000 visits a month. This case study looks at how we redesigned one of the bank's core services.</p>
+        </div>
+
+        <section class="case-study">
+            <div class="case-study__intro">
+                <div class="intro__item">
+                    <h3>Overview</h3>
+                    <p>The payment flow is one of the Co-op Bank's core experiences with hundreds of thousands of people
+                        using it every month. It must cater to both first-time users and those who use it several times
+                        a
+                        week. </p>
+                    <p> The existing flow had remained largely unchanged for over 5 years. There were also significant
+                        differences in the experience depending on the platform a customer was making a payment.
+                    </p>
+                    <p> The design team explored a new flow that simplified the experience and unified the payment flow
+                        across different platforms.</p>
+                </div>
+                <div class="intro__item">
+                    <h3>Team</h3>
+                    <p>Designer (me), 2 product owners, 2 UX researchers, 1 content designer, 1 product designer, 3
+                        engineers.</p>
+                </div>
+                <div class="intro__item">
+                    <h3>Role</h3>
+                    <p>Product design, research, testing.</p>
+                </div>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/existing-payments.png" alt="">
+            </div>
+            <p class="caption">Screenshots of existing payment screens on web and mobile apps.</p>
+
+            <div class="case-study__body">
+                <h2>Problem</h2>
+                <p>On the face of it, the payment flow is just a basic form. Users would enter the necessary details and
+                    submit them to make a payment. We had an opportunity to elevate it beyond that to bring it more in
+                    line with industry standards.</p>
+                <p>We conducted some initial usability testing to baseline the current experience. The payment flow
+                    performed relatively well with some existing customers. Customers who banked elsewhere, however,
+                    felt it was 'clunky' and 'outdated'.</p>
+                <p>There was also an opportunity to align our technical architecture across platforms. This meant the
+                    tech team could use the same microservices for both platforms over maintaining separate ones for the
+                    same service.</p>
+                <p>Finally, we had to implement a regulatory feature (confirmation of payee) that facilitated safer
+                    payments. At the time of design there were no industry standards for this service.</p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>Hypotheses</h2>
+                <p>The team got together and came up with a main hypotheses to test:</p>
+                <p>If we break the flow into smaller chunks, we will reduce cognitive load and simplify the payment
+                    process for new and repeat users. We planned on validating this hypothesis using qualitative
+                    usability testing initially. </p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>Competitor analysis</h2>
+                <p>Our researcher carried out a competitor analysis to find out how other banks handled payments. There
+                    wasn't much variance in the industry in regards to the general steps to make a payment. Stand-out
+                    payment journeys focused on good interaction design to improve the journey. We used the analysis to
+                    benchmark our redesign against.</p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>Task analysis</h2>
+                <p>To better understand the current payment flow, we mapped every step a user currently goes through to
+                    complete their goal. We opted for a task analysis because it showed every activity from beginning to
+                    end. This way we could demonstrate the complexity of the existing payment flow and seek out
+                    opportunities on a more granular level.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/task-analysis.png" alt="">
+            </div>
+            <p class="caption">Task analysis of paying a new payee.</p>
+
+            <div class="case-study__body">
+                <h2>Confirmation of Payee (CoP)</h2>
+                <p>CoP is a name-checking service that makes sure payments are being sent to the right account. It
+                    verifies a person's details with that person's bank and flags incorrect details. The purpose is to
+                    stop certain types of payment fraud.</p>
+                <p>The implication from a project perspective was integrating this step into the payment flow. We
+                    iterated on this step the most, even testing with people who were victims of fraud to get their
+                    feedback.</p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>New user flow</h2>
+                <p>Following the research, the team mapped user flows for the different payment services. There were a
+                    few different scenarios we needed to design for:</p>
+                <ul>
+                    <li>Paying a new payee,</li>
+                    <li>Paying an existing payee,</li>
+                    <li>Transferring money between accounts,</li>
+                    <li>Paying off a credit card,</li>
+                    <li>Scheduling a payment.</li>
+                </ul>
+                <p>Our new user flow broke the service into smaller more logical steps. Each step focused on one aspect
+                    of the service. This meant we could design each scenario from a collection of predefined steps.</p>
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/user-flow.png" alt="">
+            </div>
+            <p class="caption">Redesigned user flow. </p>
+
+            <div class="case-study__body">
+                <h2>Prototyping</h2>
+                <p>With a preliminary set of scenarios to assess, we set about creating a prototype for usability
+                    testing. We mocked everything up in Figma and used that for usability testing.</p>
+                <p>Given the basic nature of Figma prototypes, we adjusted our expectations for what we wanted to get
+                    from the first round of testing. We looked at things like comprehension, ease of task and how secure
+                    people felt the service was.</p>
+            </div>
+
+            <div class="case-study__video">
+                <video playsinline autoplay muted loop>
+                    <source src="vid/payments.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p class="caption">A mockup of the new payment flow. </p>
+
+
+            <div class="case-study__image">
+                <img src="img/prototype-mobile.png" alt="">
+            </div>
+
+            <div class="case-study__image">
+                <img src="img/prototype-desktop.png" alt="">
+            </div>
+            <p class="caption">A selection of mockups on mobile and desktop.  </p>
+
+            <div class="case-study__body">
+                <h2>Usability feedback</h2>
+                <p>In all, the team conducted three rounds of usability testing with 18 users. We tested with a similar
+                    demographic as the baseline test. The findings were positive:</p>
+                <ul>
+                    <li>Task success — 100%</li>
+                    <li>How easy users found the task — 8/10</li>
+                    <li>How secure users found the task — 8/10</li>
+                </ul>
+                <p>We took the results with a pinch of salt, given their subjective nature and the relative simplicity
+                    of the prototype. It did, however, give us enough confidence to move forward with our concept. </p>
+            </div>
+
+            <div class="case-study__body">
+                <h2>Results and learning</h2>
+                <p>Overall we were happy with the results. The project took around 6 weeks from beginning to end. Going
+                    through multiple rounds of usability testing helped validate and reduce the risk of our design
+                    decisions. It also gave the business peace of mind that this pretty sizeable redesign was the
+                    direction to go.</p>
+                <p>Some of our main takeaways:</p>
+                <ul>
+                    <li>Breaking the payment flow into smaller parts helped scale the service to different platforms.
+                    </li>
+                    <li>The component nature of the approach helped engineers develop a cleaner back-end solution.</li>
+                    <li>The redesign brought the payment service in line with industry conventions.</li>
+                    <li>CoP increased user agency during the payment process. </li>
+                </ul>
+            </div>
+
+            <div class="case-study__body">
+                <h2>In closing</h2>
+                <p>Having the opportunity to redesign our payment service was a rewarding experience for many reasons. Having multiple rounds of usability testing also let move fast and make decisions without having to through the usual bureaucratic process.  </p>
+
+                <p>We were also able to simplify one of the bank's core experiences and laid the foundation for new functionality to be added in future iterations.</p>
+            </div>
+        </section>
+
+
+        <section class="work work__case-study">
+            <h2 class="home__heading">Next case study</h2>
+
+            <ul class="work__links">
+                <li><span class="type gradient-1">Case study</span>
+                    Measuring UX at Co-op bank <span class="meta">How we created an approach
+                        to measure the
+                        effect and business impact of UX in the Co-op bank.</span><a href="measuring-ux.html"></a>
+
+
+                    <svg class="arrow" width="25" height="25">
+                        <use href="#arrow" />
+                    </svg>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+
+</html>

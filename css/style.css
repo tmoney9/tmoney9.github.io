@@ -1,0 +1,89 @@
+/* Custom properties */
+
+:root {
+    --textColourDark: #ffffff;
+    --backgroundDark: #000;
+
+    --gradientText: linear-gradient(90deg, #ff8a00 0%, #ff0f67 51.56%, #ff00c7 100%);
+    --gradientText2: linear-gradient(90deg,#27fff2,#e3f570);
+}
+
+/* Globals */
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.4;
+    color: var(--textColourDark);
+    background: var(--backgroundDark);
+    font-size: 1rem;
+    position: relative;
+}
+
+/* HEADER  */
+/* Layout */
+
+.container {
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 78rem;
+}
+
+.header, .footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 37.5rem) {
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .header {
+        padding-top: 2rem;
+    }
+}
+
+/* Styles */
+
+.footer {
+    color: #8a8a93;
+}
+
+
+/* Typography */
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    font-weight: 600;
+    font-size: clamp(1.2rem, 5vw, 1.56rem);
+}
+
+.footer {
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    font-weight: 600;
+}
