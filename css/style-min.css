@@ -524,6 +524,9 @@ a {
     height: auto;
     border-radius: 16px;
     margin-bottom: 1rem;
+    max-width: 390px;
+
+
 }
 
 .work a {
