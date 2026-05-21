@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shane Fadden 2023</title>
+    <link rel="stylesheet" href="css/style-min.css" />
+    <!-- <link rel="stylesheet" href="css/normalise.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/work-exp.css" />
+    <link rel="stylesheet" href="css/work.css" />
+    <link rel="stylesheet" href="css/case-study.css" /> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="thread post">
+        <p>Hi Angela,</p>
+        <p>
+          I split this account into two parts by project to better illustrate
+          the end-to-end process I used. The first project is still ongoing, so
+          this section will end before going into detailed design. The second
+          project will cover that topic.
+        </p>
+        <br />
+        <br />
+        <div class="profile">
+          <p class="name text-l text-bold">
+            Project 1: IA and nav redesign — Research → Prototype
+          </p>
+          <p class="tagline text-m text-medium">Origins of this project</p>
+        </div>
+
+        <div>
+          <p>
+            During the last quarter, one of our OKRs was to propose a redesign
+            for our app's navigation. This goal arose from feedback we received
+            during user interviews and the need to accommodate numerous new
+            features in our roadmap.
+          </p>
+          <p>
+            The IA and nav redesign project aims to provide a more scalable and
+            efficient way to find a feature or setting within our app.
+          </p>
+          <p class="tagline text-m text-medium">Understanding user behaviour</p>
+          <p>
+            The design process began with analysing our existing user data to
+            better understand how they currently navigate our app. During the
+            previous quarter, we ran qualitative user interviews with users as a
+            collaborative journey mapping exercise. These research sessions led
+            to a general understanding of our user's mental models and how they
+            were using our app.
+          </p>
+          <div class="job-thumb">
+            <img src="img/design-process/journey-map.png" alt="" />
+          </div>
+          <p>
+            We learnt that most research participants had similar frustrations
+            when navigating our app:
+          </p>
+          <ol class="post-numbered">
+            <li>
+              Most participants found it difficult to pick up where they left
+              off.
+            </li>
+            <li>
+              Participants only used one or two items from the main nav,
+              suggesting there was a bit of redundancy there.
+            </li>
+            <li>
+              The relationships between objects didn't make sense, for example
+              pipeline and interactive notebooks sat under projects, but cohorts
+              didn't. There was no rationale for this.
+            </li>
+            <li>
+              Nav items were displayed as icons, but users were unable to link
+              the icons to specific pages or features within the app.
+            </li>
+            <li>
+              Finally, one participant was quoted as saying “I dread having to
+              relearn everything, because I always forget where it is.”
+            </li>
+          </ol>
+        </div>
+        <p>
+          On top of the user frustrations mentioned above, our PM brought a
+          couple business problems to the table:
+        </p>
+        <ol class="post-numbered">
+          <li>
+            Existing architecture wasn't scalable, new features had nowhere to
+            go.
+          </li>
+          <li>
+            Workspace settings became a dumping ground for related and unrelated
+            settings. This is something we wanted the redesign to solve.
+          </li>
+        </ol>
+        <div class="job-thumb">
+          <img src="img/design-process/existing-app-map.png" alt="" />
+        </div>
+
+        <p class="tagline text-m text-medium">Defining scope and goals</p>
+        <p>
+          After the initial data analysis, we checked in with the project team
+          to converge on the scope of the project and the goals we wanted to
+          set. The team was made up of myself, a PM, a senior designer, and a UX
+          researcher.
+        </p>
+        <p>
+          Rearchitecting our app and redesigning our main nav naturally meant
+          the scope was pretty wide. However, our existing technical
+          architecture meant our existing hierarchy needed to remain largely
+          unchanged. In addition, we decided not to change any existing features
+          as part of this project, instead picking them up as separate
+          initiatives.
+        </p>
+        <p>
+          From here we converged on three goals we wanted this project to
+          address:
+        </p>
+        <ol class="post-numbered">
+          <li>
+            Create a scalable system: Future proof our information architecture
+            so our software can continue to scale.
+          </li>
+          <li>
+            Eliminate friction: Reduce the steps it takes for a user to jump
+            back in to their previous workflow.
+          </li>
+          <li>
+            Improve accessibility and visual design: Make it clear to users
+            where to go and pave the way for a new visual style for the app.
+          </li>
+        </ol>
+
+        <p class="tagline text-m text-medium">Exploratory research</p>
+
+        <p>
+          To gain a better understanding of the problem space, we conducted
+          several research activities:
+        </p>
+        <p>
+          <strong>Heuristic analysis:</strong> we evaluated our exiting
+          navigation against some best-practice usability principles to see how
+          it compared.
+        </p>
+        <div class="job-thumb">
+          <img src="img/design-process/heuristic-analysis.png" alt="" />
+        </div>
+
+        <p>
+          <strong>Competitor and wider market analysis:</strong> During the
+          first round of market analysis, we focused on how competitors and
+          market leaders structured their information. We primarily evaluated
+          elements such as hierarchy, labelling, and nested links.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/heuristic-analysis.png" alt="" />
+        </div>
+
+        <p>
+          <strong>Card sorting with existing users:</strong> We conducted
+          several card sorting activities to help us gain a more nuanced
+          understanding of how our users categorised the content in our app.
+          These were run as asynchronous workshops with a range of user cohorts.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/card-sort.png" alt="" />
+        </div>
+
+        <p>
+          The team then gathered for another sync to discuss the findings from
+          this phase. At this point, there were no decisions to be made beyond
+          whether we are satisfied with the amount of research done and whether
+          to proceed with the project.
+        </p>
+
+        <p>
+          The most relevant findings were captured as ideas for the design
+          phase.
+        </p>
+
+        <p class="tagline text-m text-medium">Designing a new app map</p>
+
+        <p>
+          After deepening our understanding of the problem space, we set about
+          modelling our own system and figuring out the relationships between
+          the different entities (or objects) that exist within it. For this we
+          used a technique called object mapping (from OOUX).
+        </p>
+
+        <p>
+          The purpose of this was to identify the different objects in our
+          system, as our users understood them, and map how they relate to one
+          another. Using this method we were able to synthesise the findings
+          from the research phase into a clear structure with clear
+          relationships, that aligned to our user's mental models.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/object-map.png" alt="" />
+        </div>
+
+        <p>
+          Once we had structured our objects, we proceeded to map them to a new
+          application map. The purpose of this was to visually illustrate the
+          hierarchy of our objects. Compared to the previous app map, the
+          proposed design had more hierarchy, which in turn made it more
+          scalable.
+        </p>
+
+        <p>
+          We also included suggestions for labelling and moving various objects
+          to new locations that aligned with the research findings from the
+          previous phase.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/proposed-app-map.png" alt="" />
+        </div>
+
+        <p>A note here:</p>
+        <p>
+          At this point I would usually validate this app map against our
+          previous one using a tree test. We proposed this approach to the
+          project manager. However, due to the project deadline, we decided to
+          perform all of our testing during the navigation redesign phase. We
+          had a reasonable level of confidence in our proposed redesign, which
+          was bolstered by the research findings.
+        </p>
+
+        <p class="tagline text-m text-medium">Phase 2 — Navigation redesign</p>
+
+        <p>
+          The second phase of this project was to apply our redesigned app map
+          to our product and test it. We kicked this off by going back to
+          research, specifically looking at navigation patterns that different
+          apps used. Our analysis mainly looked at the visual treatment of these
+          patterns and their placement or location within the app's interface.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/market-analysis.png" alt="" />
+        </div>
+
+        <p>
+          We mainly looked at successful SAAS applications with high user bases.
+          The objective being to propel our own app to their level knowing that
+          these apps are battle tested and designed by teams far bigger than our
+          own.
+        </p>
+        <p>
+          Using this analysis we were able to define some guiding principles for
+          our redesign:
+        </p>
+        <ol class="post-numbered">
+          <li>
+            Preserve the sidebar navigation, these popular among data heavy
+            apps.
+          </li>
+          <li>Use icons and labels for navigation items.</li>
+          <li>Include an avatar or initials for the account link.</li>
+          <li>
+            Implement contextual navigation items based on the page or level.
+          </li>
+          <li>
+            Ensure the first page a user sees when they log in is relevant based
+            on where they left off or where they came from.
+          </li>
+          <li>
+            Provide alternative ways for users to move between pages, instead of
+            relying solely on the main navigation.
+          </li>
+        </ol>
+
+        <p class="tagline text-m text-medium">Sketching and wireframes</p>
+
+        <p>
+          After agreeing on the design principles for the project, we focused on
+          turning our ideas into something more tangible. First, we elaborated
+          on our object maps from the previous phase by adding all the extra
+          details within these objects:
+        </p>
+        <ul class="post-list">
+          <li>Call to actions</li>
+          <li>User generated content</li>
+          <li>Metadata or system generated content</li>
+          <li>Nested or related objects</li>
+        </ul>
+
+        <div class="job-thumb">
+          <img src="img/design-process/object-map-expanded.png" alt="" />
+        </div>
+
+        <p>
+          From there we started arranging these object maps spatially into
+          content wireframes. This gave us the full view of all the pages we
+          needed to cater for and a rough idea of where the content might sit on
+          the page.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/content-wireframes.png" alt="" />
+        </div>
+
+        <p>
+          Finally we added a bit more fidelity to these wireframes to explore
+          different nav patterns and have a more useful artefact to present to
+          stakeholders.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/wireframes.png" alt="" />
+        </div>
+
+        <p class="tagline text-m text-medium">Prototyping and testing</p>
+
+        <p>
+          After several rounds of iterations and discussions with the PM, we
+          made the decision to develop and test three different prototypes. To
+          ensure that people's focus was on tasks and structure instead of
+          visual design elements, we chose to test prototypes that were devoid
+          of any colour or branding.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/prototypes.png" alt="" />
+        </div>
+
+        <p>
+          Although we developed three different prototypes, they were all built
+          using the redesigned app map. The nuance was in the different nav
+          patterns used to indicate the different hierarchies. Option 1 (left)
+          proposed a more focused and stricter hierarchy, whereas Option 2
+          (centre), and 3 (right) facilitated quicker switching between projects
+          and workspaces.
+        </p>
+
+        <p>
+          These were just a couple of the assumptions we wanted to validate
+          during usability testing.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/options.png" alt="" />
+        </div>
+
+        <p class="tagline text-m text-medium">Next steps</p>
+
+        <p>
+          This project is still ongoing and we're currently conducting
+          unmoderated usability testing using Maze. The test was designed as a
+          summative usability test so that we could benchmark prototypes against
+          each other.
+        </p>
+
+        <p>
+          We also included some standard survey questions to evaluate such as
+          task satisfaction and ease of use. Our aim is to test with at least
+          twenty research participants all of which are active users. From there
+          we'll converge on a single solution and do some more moderated
+          usability testing.
+        </p>
+
+        <p class="tagline text-m text-medium">A predictable cadence</p>
+
+        <p>
+          I wanted to call out our approach to meetings throughout this project.
+          Lifebit has somewhat of an anti-meeting culture so we set out to
+          define the cadence and format of our meetings at the start of the
+          project.
+        </p>
+
+        <p>
+          Instead of having meetings that aligned with the stages of the
+          project, we opted for a more frequent cadence of bi-weekly synchs that
+          were 15-20 minutes long. Each meeting had clear recommendations from
+          the design team based on data gathered from previous round which fed
+          the actions for the next round of work.
+        </p>
+
+        <div class="profile">
+          <p class="name text-l text-bold">
+            Project 2 – Detailed design and hand-off
+          </p>
+          <p>
+            The second project I want to mention covers the detailed design
+            phase and implementation phase.
+          </p>
+        </div>
+
+        <p class="tagline text-m text-medium">Drafting user stories</p>
+        <p>
+          Usually at this point in the process, we had a clear understanding of
+          the problem and opportunities we were going to address. With that in
+          mind, our next step in the process was to draft user stories.
+        </p>
+
+        <p>
+          As with many organisations using SCRUM, these user stories are
+          developer focused, and not used as a tool for ideating or exploratory
+          design. At Lifebit we use them to capture as much detail as possible
+          so an engineer can pick it up without much fuss.
+        </p>
+
+        <p>
+          They also ensure the team remains on the same page. From a design
+          point of view it helps me align flows and relevant documentation to
+          the corresponding user story.
+        </p>
+
+        <p class="tagline text-m text-medium">Detailed design</p>
+
+        <p>
+          The detailed design phase typically consists of designing every screen
+          state and relevant user flow. I tend to break hand-off documents into
+          pages and components. Generally, I will go overboard with specs and
+          documentation as it helps me catch any missing edge cases and provides
+          engineers with a robust starting point.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/page-specs.png" alt="" />
+        </div>
+
+        <p>
+          How I create hand-off documents is an ever evolving process of
+          feedback and refinement. One thing I've found quite helpful recently
+          is working with engineers to develop a token library. Engineers don't
+          have to worry about hardcoding values and designers can be sure
+          mockups are developed to spec.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/component-specs.png" alt="" />
+        </div>
+
+        <p class="tagline text-m text-medium">Implementing the new designs</p>
+
+        <p>
+          Once we've completed the detailed design phase, it's typical for us to
+          schedule a design review session with the engineers and project
+          managers. During this session, we can discuss any potential issues,
+          solicit feedback, and ensure that everyone is aligned before moving
+          forward.
+        </p>
+
+        <p>
+          This might be the first time some engineers see the mockups. How we
+          tend to work at Lifebit is we include a representative from the tech
+          team during ideation and design who validates the feasibility of the
+          designs.
+        </p>
+
+        <p>
+          After delivering the work to the engineers, my focus shifts to
+          providing design support. This role extends until the product launch,
+          and my primary goal is to help unblock the engineers as quickly as
+          possible.
+        </p>
+
+        <p>
+          The last part of the process before launch is the design QA step. This
+          gives the baton back to the designer to review the implemented designs
+          and report any gaps or issues. At Lifebit, this step ends with
+          approval or sign-off from the designer. After which it can be moved
+          into production.
+        </p>
+
+        <div class="job-thumb">
+          <img src="img/design-process/design-qa.png" alt="" />
+        </div>
+
+        <p class="tagline text-m text-medium">Build, measure, learn?</p>
+
+        <p>
+          A final word on our our current process at Lifebit. While we have a
+          mechanism for capturing qualitative feedback during the early stages,
+          we don't yet have a robust analytical framework in place to measure
+          features after launch. This is a symptom of our current maturity and
+          something we're working towards implementing.
+        </p>
+
+        <p>
+          The reason I mention it is, in the past, this wouldn't have been the
+          end of the design process. Generally we'd launch features with
+          relevant quantitive metrics that we could review at certain
+          milestones. From there we'd make a decision to either iterate on the
+          feature or investigate why it hasn't worked as we expected.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

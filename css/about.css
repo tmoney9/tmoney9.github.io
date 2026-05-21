@@ -1,0 +1,231 @@
+/* Layout */
+
+.about {
+  padding-top: 8rem;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+.about__text {
+  margin-bottom: 32px;
+}
+
+.about__text p {
+  margin-top: 0;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.grid-row__lead {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.grid-row__content {
+  flex-grow: 1;
+}
+
+/* Header Specifics */
+.profile {
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.profile .tagline {
+  color: var(--textColourSecondary);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile .name {
+  font-size: var(--fontSizeXL);
+  font-weight: 500;
+  color: var(--textColourPrimary);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Work Experience Specifics */
+.work-experience {
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+
+.job-row {
+  margin-bottom: 8px;
+}
+
+.job-row__label {
+  font-size: var(--fontSizeS);
+  color: var(--textColourSecondary);
+  text-align: left;
+  width: 100%;
+}
+
+.job-row__title {
+  font-size: var(--fontSizeL);
+  font-weight: 400;
+  color: var(--textColourPrimary);
+  margin-bottom: 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.job-row__title .chevron {
+  color: var(--textColourSecondary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+details[open] .job-row__title .chevron {
+  transform: scaleY(-1);
+}
+
+.job-row__title::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .job-row__title {
+  margin-bottom: 12px;
+}
+
+.job-row__title a {
+  color: var(--textColourSecondary);
+  text-decoration: underline;
+  text-decoration-color: #444;
+}
+
+.job-row__description {
+  font-size: var(--fontSizeM);
+  line-height: 1.6;
+  color: var(--textColourPrimary);
+  padding-bottom: 24px;
+}
+
+.job-row__description ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 12px;
+}
+
+.job-row__description li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+/* Static Grid List Specifics */
+.grid-list {
+  margin-top: 0;
+}
+
+.grid-list__item {
+  margin-bottom: 48px;
+}
+
+.grid-list__content {
+  font-size: var(--fontSizeL);
+  line-height: 1.6;
+  color: var(--textColourSecondary);
+}
+
+.grid-list__content--light {
+  color: var(--textColourPrimary);
+}
+
+.grid-list__content p {
+  margin-bottom: 8px;
+}
+
+.grid-list__content span {
+  color: var(--textColourPrimary) !important;
+  font-weight: 400 !important;
+}
+
+.grid-list__content a {
+  color: var(--textColourPrimary) !important;
+  text-decoration: underline !important;
+}
+
+.profile p {
+  margin-bottom: 0;
+}
+
+.about__links li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles */
+
+.name {
+  color: var(--textColourPrimary);
+}
+
+.about {
+  color: var(--textColourSecondary);
+}
+
+.about__links {
+  display: flex;
+  gap: 24px;
+}
+
+.about__links a {
+  text-transform: capitalize;
+  color: var(--textColourSecondary);
+}
+
+.about__links a:hover {
+  color: var(--textColourPrimary);
+}
+
+/* Type */
+
+.about {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.about-me {
+  list-style: disc;
+  padding-left: 16px;
+  margin-bottom: 24px;
+}

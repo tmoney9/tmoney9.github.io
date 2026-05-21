@@ -1,0 +1,174 @@
+/* Custom properties */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --textColourPrimary: #F7F7F7;
+  --textColourSecondary: #777777;
+  --backgroundDark: #1F1F1F;
+  --backgroundCard: #151515;
+  --backgroundSecondary: hsla(214, 14%, 15%, 1);
+  --backgroundTertiary: hsla(214, 14%, 20%, 1);
+  --backgroundHover: hsla(214, 14%, 25%, 1);
+  --backgroundModal: #0D0D0D;
+
+  --fontSizeXL: 22px;
+  --fontSizeL: 17px;
+  --fontSizeM: 15px;
+  --fontSizeS: 13px;
+
+  --gradientText: linear-gradient(
+    90deg,
+    #ff8a00 0%,
+    #ff0f67 51.56%,
+    #ff00c7 100%
+  );
+  --gradientText2: linear-gradient(90deg, #27fff2, #e3f570);
+}
+
+/* Globals */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: var(--textColourSecondary);
+  background: var(--backgroundDark);
+  font-size: var(--fontSizeL);
+  position: relative;
+}
+
+/* HEADER  */
+/* Layout */
+
+.container {
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 800px;
+}
+
+.header,
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 37.5rem) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .header {
+    padding-top: 2rem;
+  }
+}
+
+/* Styles */
+
+.footer {
+  color: var(--textColourSecondary);
+}
+
+/* Typography */
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  font-weight: 600;
+  font-size: clamp(1.2rem, 5vw, 1.56rem);
+}
+
+.footer {
+  font-size: clamp(0.8rem, 5vw, 1.2rem);
+  font-weight: 600;
+}
+
+.text-xl {
+  font-size: var(--fontSizeXL);
+  font-weight: 400;
+}
+
+.text-l {
+  font-size: var(--fontSizeL);
+  font-weight: 400;
+}
+
+.text-m {
+  font-size: var(--fontSizeM);
+  font-weight: 400;
+}
+.text-s {
+  font-size: var(--fontSizeS);
+  font-weight: 400;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-medium {
+  font-weight: 500;
+}

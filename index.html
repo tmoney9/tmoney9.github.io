@@ -1,0 +1,1785 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shane Fadden 2023</title>
+        <!-- <link rel="stylesheet" href="css/style-min.css" /> -->
+        <link rel="stylesheet" href="css/normalise.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="css/work-exp.css" />
+        <link rel="stylesheet" href="css/work.css" />
+        <link rel="stylesheet" href="css/case-study.css" />
+        <script>
+            // Autorefresh script
+            setInterval(async () => {
+                try {
+                    const res = await fetch(window.location.href, {
+                        method: "HEAD",
+                        cache: "no-store",
+                    });
+                    const lastModified = res.headers.get("Last-Modified");
+                    if (
+                        window._lastModified &&
+                        window._lastModified !== lastModified
+                    ) {
+                        window.location.reload();
+                    }
+                    window._lastModified = lastModified;
+                } catch (e) {
+                    console.error("Autorefresh polling failed", e);
+                }
+            }, 1000);
+
+            // Image fullscreen script
+            document.addEventListener("click", function (e) {
+                const img = e.target.closest(".modal img");
+                if (img) {
+                    img.classList.toggle("img-fullscreen");
+                    document.body.classList.toggle("no-scroll");
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <svg
+            style="display: none"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <symbol id="arrow">
+                <path
+                    d="M23.6735 13.2432L23.6735 10.8065L0.430663 10.8065L0.430664 13.2432L23.6735 13.2432Z"
+                    fill="#8a8a93"
+                />
+                <path
+                    d="M22.739 13.415L24.4307 11.6416L13.4477 0.127441L11.756 1.90092L22.739 13.415Z"
+                    fill="#8a8a93"
+                />
+                <path
+                    d="M22.739 10.8398L24.4307 12.6133L13.4477 24.1274L11.756 22.354L22.739 10.8398Z"
+                    fill="#8a8a93"
+                />
+            </symbol>
+        </svg>
+
+        <div class="container">
+            <section class="about">
+                <div class="about__text">
+                    <div class="grid-row profile">
+                        <div class="grid-row__lead">
+                            <div class="profile-pic">
+                                <img
+                                    src="img/profile-pic.png"
+                                    alt="Shane Fadden"
+                                />
+                            </div>
+                        </div>
+                        <div class="grid-row__content">
+                            <div class="profile__info">
+                                <p class="name text-xl text-medium">
+                                    Shane Fadden
+                                </p>
+                                <p class="tagline text-m text-medium">
+                                    Wirral based Designer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work-experience">
+                <div class="grid-row job-row">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">Currently</p>
+                    </div>
+                    <div class="grid-row__content">
+                        <details class="job-accordion">
+                            <summary class="job-row__title">
+                                <span>
+                                    Founding Designer at
+                                    <a href="https://kiin.bio" target="_blank"
+                                        >Kiin Bio</a
+                                    >
+                                </span>
+                                <svg
+                                    class="chevron"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        d="m5 10l7 7l7-7"
+                                    />
+                                </svg>
+                            </summary>
+                            <div class="job-row__description">
+                                <ul>
+                                    <li>
+                                        Designed data-intensive web interfaces
+                                        and interactive dashboards for an
+                                        AI-guided platform, featuring real-time
+                                        feeds, timelines, and high-density
+                                        experiment dashboards.
+                                    </li>
+                                    <li>
+                                        Built the product strategy and UX
+                                        foundation from scratch for early-stage
+                                        projects.
+                                    </li>
+                                    <li>
+                                        Facilitated design workshops with
+                                        subject matter experts to align
+                                        cross-functional teams around a unified
+                                        vision for a professional-grade research
+                                        platform.
+                                    </li>
+                                    <li>
+                                        Built high-fidelity front-end prototypes
+                                        using Claude Code and Tailwind for rapid
+                                        iteration.
+                                    </li>
+                                    <li>
+                                        Mapped complex system architectures and
+                                        user flows in FigJam and Miro.
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="grid-row job-row">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">2021 – 2025</p>
+                    </div>
+                    <div class="grid-row__content">
+                        <details class="job-accordion">
+                            <summary class="job-row__title">
+                                <span>
+                                    Lead Product Designer at
+                                    <a href="https://lifebit.ai" target="_blank"
+                                        >Lifebit</a
+                                    >
+                                </span>
+                                <svg
+                                    class="chevron"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        d="m5 10l7 7l7-7"
+                                    />
+                                </svg>
+                            </summary>
+                            <div class="job-row__description">
+                                <ul>
+                                    <li>
+                                        Designed intuitive web interfaces for
+                                        complex data analytics, focusing on
+                                        high-density information displays and
+                                        interactive data visualisation tools.
+                                    </li>
+                                    <li>
+                                        Facilitated and ran end-to-end user
+                                        research workshops to to transform raw
+                                        customer insights into actionable
+                                        product improvements.
+                                    </li>
+                                    <li>
+                                        Managed the Figma design system and
+                                        synchronised components with engineering
+                                        via Storybook.
+                                    </li>
+                                    <li>
+                                        Collaborated daily with PMs and scrum
+                                        teams to bridge the gap between
+                                        requirements and technical execution.
+                                    </li>
+                                    <li>
+                                        Identified friction points in specific
+                                        value streams by analysing event data
+                                        and user funnels in PostHog and
+                                        FullStory.
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="grid-row job-row">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">2018 – 2021</p>
+                    </div>
+                    <div class="grid-row__content">
+                        <details class="job-accordion">
+                            <summary class="job-row__title">
+                                <span>
+                                    UX Design Manager at
+                                    <a
+                                        href="https://www.co-operativebank.co.uk/"
+                                        target="_blank"
+                                        >Co-op Bank</a
+                                    >
+                                </span>
+                                <svg
+                                    class="chevron"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        d="m5 10l7 7l7-7"
+                                    />
+                                </svg>
+                            </summary>
+                            <div class="job-row__description">
+                                <ul>
+                                    <li>
+                                        Led the UX strategy and product design
+                                        for iOS, Android, and web apps within
+                                        the financial sector.
+                                    </li>
+                                    <li>
+                                        Led the Open Banking rollout as Lead
+                                        Designer, designing the end-to-end
+                                        consent and authentication flows that
+                                        allowed customers to securely share
+                                        their financial data with third-party
+                                        apps.
+                                    </li>
+                                    <li>
+                                        Simplified complex financial processes
+                                        into intuitive interfaces for retail and
+                                        business customers.
+                                    </li>
+                                    <li>
+                                        Scaled the bank's design system using
+                                        Figma and Storybook for consistent,
+                                        responsive design.
+                                    </li>
+                                    <li>
+                                        Enforced WCAG accessibility standards
+                                        across all digital products.
+                                    </li>
+                                    <li>
+                                        Collaborated with legal, compliance, and
+                                        engineering teams to launch secure
+                                        features within strict regulatory
+                                        constraints.
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="grid-row job-row">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">2015 – 2018</p>
+                    </div>
+                    <div class="grid-row__content">
+                        <details class="job-accordion">
+                            <summary class="job-row__title">
+                                <span>
+                                    Senior Interaction Designer at
+                                    <a href="#" target="_blank">Paperkite</a>
+                                </span>
+                                <svg
+                                    class="chevron"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        d="m5 10l7 7l7-7"
+                                    />
+                                </svg>
+                            </summary>
+                            <div class="job-row__description">
+                                <ul>
+                                    <li>
+                                        Designed and launched high-scale mobile
+                                        experiences for global brands, including
+                                        the BPMe app, which revolutionised fuel
+                                        payments for over 500,000 users by
+                                        enabling secure, in-vehicle transactions
+                                        and queue-skipping.
+                                    </li>
+                                    <li>
+                                        Led the mobile product strategy for Hell
+                                        Pizza, translating unique brand
+                                        identities into intuitive native app
+                                        interfaces while optimising complex
+                                        ordering flows and high-traffic user
+                                        journeys.
+                                    </li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="grid-row job-row">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">2012 – 2015</p>
+                    </div>
+                    <div class="grid-row__content">
+                        <h3 class="job-row__title">
+                            Designer & Front-end dev at
+                            <a href="#" target="_blank">JTB Studios</a>
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid-list">
+                <div class="grid-row grid-list__item">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">I can help with</p>
+                    </div>
+                    <div
+                        class="grid-row__content grid-list__content grid-list__content--light"
+                    >
+                        <p>Digital product design</p>
+                        <p>Design systems at scale</p>
+                        <p>UX strategy</p>
+                        <p>User research & synthesis</p>
+                        <p>Design engineering</p>
+                        <p>Framer website design & development</p>
+                        <p>Experience architecture</p>
+                        <p>UX analytics & metrics</p>
+                    </div>
+                </div>
+
+                <div class="grid-row grid-list__item">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">Tools</p>
+                    </div>
+                    <div class="grid-row__content grid-list__content">
+                        <p>
+                            Figma:
+                            <span>System architecture and UI components</span>
+                        </p>
+                        <p>
+                            FigJam / Miro:
+                            <span>Mapping architecture & user flows</span>
+                        </p>
+                        <p>
+                            Claude Code:
+                            <span>AI-agentic coding for rapid prototyping</span>
+                        </p>
+                        <p>
+                            Tailwind:
+                            <span>Front-end prototyping & development</span>
+                        </p>
+                        <p>
+                            Storybook:
+                            <span>design system documentation</span>
+                        </p>
+                        <p>
+                            PostHog / FullStory:
+                            <span>Event based tracking & funnels</span>
+                        </p>
+                        <p>Linear / Jira: <span>Task management</span></p>
+                    </div>
+                </div>
+
+                <div class="grid-row grid-list__item">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">Current interests</p>
+                    </div>
+                    <div
+                        class="grid-row__content grid-list__content grid-list__content--light"
+                    >
+                        <p>AI tools and apps</p>
+                        <p>WebGL motion: Unicorn Studio</p>
+                        <p>DIY home projects</p>
+                        <p>The National Trust</p>
+                    </div>
+                </div>
+
+                <div class="grid-row grid-list__item">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">Education</p>
+                    </div>
+                    <div
+                        class="grid-row__content grid-list__content grid-list__content--light"
+                    >
+                        <p>MA in Professional Design Pratice, DIT</p>
+                        <p>BSc Multimedia Studies, DCU</p>
+                    </div>
+                </div>
+
+                <div class="grid-row grid-list__item">
+                    <div class="grid-row__lead">
+                        <p class="job-row__label">Contact</p>
+                    </div>
+                    <div
+                        class="grid-row__content grid-list__content grid-list__content--light"
+                    >
+                        <p>
+                            <a href="mailto:faddenero@gmail.com">Email</a>
+                        </p>
+                        <p>07 456 175 165</p>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="text-s text-regular">Some work</h2>
+
+            <section class="work-list">
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img
+                            src="img/design-process/proposed-app-map.png"
+                            alt="Lifebit"
+                        />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">Lifebit: </span>
+                            <span class="work-item__project"
+                                >IA & Navigation redesign</span
+                            >
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2026</div>
+                    <div class="job-link">
+                        <a class="open-thread-0"></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/payments.png" alt="Co-op bank" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">Co-op bank: </span>
+                            <span class="work-item__project"
+                                >Make a payment</span
+                            >
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2020</div>
+                    <div class="job-link">
+                        <a class="open-thread-1"></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/ia.png" alt="Co-op bank" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">Co-op bank: </span>
+                            <span class="work-item__project">IA redesign</span>
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2020</div>
+                    <div class="job-link">
+                        <a class="open-thread-2"></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/measure.png" alt="Co-op bank" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">Co-op bank: </span>
+                            <span class="work-item__project">Measuring UX</span>
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2019</div>
+                    <div class="job-link">
+                        <a class="open-thread-3"></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/design-system.png" alt="Co-op bank" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">Co-op bank: </span>
+                            <span class="work-item__project"
+                                >Building a design system</span
+                            >
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2018</div>
+                    <div class="job-link">
+                        <a class="open-thread-4"></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/bpme.png" alt="PaperKite" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">PaperKite: </span>
+                            <span class="work-item__project">BPMe App ↗</span>
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2018</div>
+                    <div class="job-link">
+                        <a
+                            href="https://apps.apple.com/nz/app/bpme-for-faster-fuel-coffee/id1116524739"
+                            target="_blank"
+                        ></a>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item__image">
+                        <img src="img/hell.png" alt="PaperKite" />
+                    </div>
+                    <div class="work-item__content">
+                        <h3 class="work-item__title text-m">
+                            <span class="work-item__client">PaperKite: </span>
+                            <span class="work-item__project"
+                                >Hell Pizza App ↗</span
+                            >
+                        </h3>
+                    </div>
+                    <div class="work-item__meta">2017</div>
+                    <div class="job-link">
+                        <a
+                            href="https://apps.apple.com/nz/app/hell-pizza/id460256659"
+                            target="_blank"
+                        ></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <dialog class="modal thread-0">
+            <a class="close-button close-thread-0">
+                <span> Back</span>
+            </a>
+            <div class="container">
+                <section class="thread post">
+                    <div class="profile">
+                        <p class="name text-l text-bold">
+                            Project 1: IA and nav redesign — Research →
+                            Prototype
+                        </p>
+                        <p class="tagline text-m text-medium">
+                            Origins of this project
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            During the last quarter, one of our OKRs was to
+                            propose a redesign for our app's navigation. This
+                            goal arose from feedback we received during user
+                            interviews and the need to accommodate numerous new
+                            features in our roadmap.
+                        </p>
+                        <p>
+                            The IA and nav redesign project aims to provide a
+                            more scalable and efficient way to find a feature or
+                            setting within our app.
+                        </p>
+                        <p class="tagline text-m text-medium">
+                            Understanding user behaviour
+                        </p>
+                        <p>
+                            The design process began with analysing our existing
+                            user data to better understand how they currently
+                            navigate our app. During the previous quarter, we
+                            ran qualitative user interviews with users as a
+                            collaborative journey mapping exercise. These
+                            research sessions led to a general understanding of
+                            our user's mental models and how they were using our
+                            app.
+                        </p>
+                        <div class="job-thumb">
+                            <img
+                                src="img/design-process/journey-map.png"
+                                alt=""
+                            />
+                        </div>
+                        <p>
+                            We learnt that most research participants had
+                            similar frustrations when navigating our app:
+                        </p>
+                        <ol class="post-numbered">
+                            <li>
+                                Most participants found it difficult to pick up
+                                where they left off.
+                            </li>
+                            <li>
+                                Participants only used one or two items from the
+                                main nav, suggesting there was a bit of
+                                redundancy there.
+                            </li>
+                            <li>
+                                The relationships between objects didn't make
+                                sense, for example pipeline and interactive
+                                notebooks sat under projects, but cohorts
+                                didn't. There was no rationale for this.
+                            </li>
+                            <li>
+                                Nav items were displayed as icons, but users
+                                were unable to link the icons to specific pages
+                                or features within the app.
+                            </li>
+                            <li>
+                                Finally, one participant was quoted as saying “I
+                                dread having to relearn everything, because I
+                                always forget where it is.”
+                            </li>
+                        </ol>
+                    </div>
+                    <p>
+                        On top of the user frustrations mentioned above, our PM
+                        brought a couple business problems to the table:
+                    </p>
+                    <ol class="post-numbered">
+                        <li>
+                            Existing architecture wasn't scalable, new features
+                            had nowhere to go.
+                        </li>
+                        <li>
+                            Workspace settings became a dumping ground for
+                            related and unrelated settings. This is something we
+                            wanted the redesign to solve.
+                        </li>
+                    </ol>
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/existing-app-map.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p class="tagline text-m text-medium">
+                        Defining scope and goals
+                    </p>
+                    <p>
+                        After the initial data analysis, we checked in with the
+                        project team to converge on the scope of the project and
+                        the goals we wanted to set. The team was made up of
+                        myself, a PM, a senior designer, and a UX researcher.
+                    </p>
+                    <p>
+                        Rearchitecting our app and redesigning our main nav
+                        naturally meant the scope was pretty wide. However, our
+                        existing technical architecture meant our existing
+                        hierarchy needed to remain largely unchanged. In
+                        addition, we decided not to change any existing features
+                        as part of this project, instead picking them up as
+                        separate initiatives.
+                    </p>
+                    <p>
+                        From here we converged on three goals we wanted this
+                        project to address:
+                    </p>
+                    <ol class="post-numbered">
+                        <li>
+                            Create a scalable system: Future proof our
+                            information architecture so our software can
+                            continue to scale.
+                        </li>
+                        <li>
+                            Eliminate friction: Reduce the steps it takes for a
+                            user to jump back in to their previous workflow.
+                        </li>
+                        <li>
+                            Improve accessibility and visual design: Make it
+                            clear to users where to go and pave the way for a
+                            new visual style for the app.
+                        </li>
+                    </ol>
+
+                    <p class="tagline text-m text-medium">
+                        Exploratory research
+                    </p>
+
+                    <p>
+                        To gain a better understanding of the problem space, we
+                        conducted several research activities:
+                    </p>
+                    <p>
+                        <strong>Heuristic analysis:</strong> we evaluated our
+                        exiting navigation against some best-practice usability
+                        principles to see how it compared.
+                    </p>
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/heuristic-analysis.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>
+                        <strong>Competitor and wider market analysis:</strong>
+                        During the first round of market analysis, we focused on
+                        how competitors and market leaders structured their
+                        information. We primarily evaluated elements such as
+                        hierarchy, labelling, and nested links.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/heuristic-analysis.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>
+                        <strong>Card sorting with existing users:</strong> We
+                        conducted several card sorting activities to help us
+                        gain a more nuanced understanding of how our users
+                        categorised the content in our app. These were run as
+                        asynchronous workshops with a range of user cohorts.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/card-sort.png" alt="" />
+                    </div>
+
+                    <p>
+                        The team then gathered for another sync to discuss the
+                        findings from this phase. At this point, there were no
+                        decisions to be made beyond whether we are satisfied
+                        with the amount of research done and whether to proceed
+                        with the project.
+                    </p>
+
+                    <p>
+                        The most relevant findings were captured as ideas for
+                        the design phase.
+                    </p>
+
+                    <p class="tagline text-m text-medium">
+                        Designing a new app map
+                    </p>
+
+                    <p>
+                        After deepening our understanding of the problem space,
+                        we set about modelling our own system and figuring out
+                        the relationships between the different entities (or
+                        objects) that exist within it. For this we used a
+                        technique called object mapping (from OOUX).
+                    </p>
+
+                    <p>
+                        The purpose of this was to identify the different
+                        objects in our system, as our users understood them, and
+                        map how they relate to one another. Using this method we
+                        were able to synthesise the findings from the research
+                        phase into a clear structure with clear relationships,
+                        that aligned to our user's mental models.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/object-map.png" alt="" />
+                    </div>
+
+                    <p>
+                        Once we had structured our objects, we proceeded to map
+                        them to a new application map. The purpose of this was
+                        to visually illustrate the hierarchy of our objects.
+                        Compared to the previous app map, the proposed design
+                        had more hierarchy, which in turn made it more scalable.
+                    </p>
+
+                    <p>
+                        We also included suggestions for labelling and moving
+                        various objects to new locations that aligned with the
+                        research findings from the previous phase.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/proposed-app-map.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>A note here:</p>
+                    <p>
+                        At this point I would usually validate this app map
+                        against our previous one using a tree test. We proposed
+                        this approach to the project manager. However, due to
+                        the project deadline, we decided to perform all of our
+                        testing during the navigation redesign phase. We had a
+                        reasonable level of confidence in our proposed redesign,
+                        which was bolstered by the research findings.
+                    </p>
+
+                    <p class="tagline text-m text-medium">
+                        Phase 2 — Navigation redesign
+                    </p>
+
+                    <p>
+                        The second phase of this project was to apply our
+                        redesigned app map to our product and test it. We kicked
+                        this off by going back to research, specifically looking
+                        at navigation patterns that different apps used. Our
+                        analysis mainly looked at the visual treatment of these
+                        patterns and their placement or location within the
+                        app's interface.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/market-analysis.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>
+                        We mainly looked at successful SAAS applications with
+                        high user bases. The objective being to propel our own
+                        app to their level knowing that these apps are battle
+                        tested and designed by teams far bigger than our own.
+                    </p>
+                    <p>
+                        Using this analysis we were able to define some guiding
+                        principles for our redesign:
+                    </p>
+                    <ol class="post-numbered">
+                        <li>
+                            Preserve the sidebar navigation, these popular among
+                            data heavy apps.
+                        </li>
+                        <li>Use icons and labels for navigation items.</li>
+                        <li>
+                            Include an avatar or initials for the account link.
+                        </li>
+                        <li>
+                            Implement contextual navigation items based on the
+                            page or level.
+                        </li>
+                        <li>
+                            Ensure the first page a user sees when they log in
+                            is relevant based on where they left off or where
+                            they came from.
+                        </li>
+                        <li>
+                            Provide alternative ways for users to move between
+                            pages, instead of relying solely on the main
+                            navigation.
+                        </li>
+                    </ol>
+
+                    <p class="tagline text-m text-medium">
+                        Sketching and wireframes
+                    </p>
+
+                    <p>
+                        After agreeing on the design principles for the project,
+                        we focused on turning our ideas into something more
+                        tangible. First, we elaborated on our object maps from
+                        the previous phase by adding all the extra details
+                        within these objects:
+                    </p>
+                    <ul class="post-list">
+                        <li>Call to actions</li>
+                        <li>User generated content</li>
+                        <li>Metadata or system generated content</li>
+                        <li>Nested or related objects</li>
+                    </ul>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/object-map-expanded.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>
+                        From there we started arranging these object maps
+                        spatially into content wireframes. This gave us the full
+                        view of all the pages we needed to cater for and a rough
+                        idea of where the content might sit on the page.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/content-wireframes.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p>
+                        Finally we added a bit more fidelity to these wireframes
+                        to explore different nav patterns and have a more useful
+                        artefact to present to stakeholders.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/wireframes.png" alt="" />
+                    </div>
+
+                    <p class="tagline text-m text-medium">
+                        Prototyping and testing
+                    </p>
+
+                    <p>
+                        After several rounds of iterations and discussions with
+                        the PM, we made the decision to develop and test three
+                        different prototypes. To ensure that people's focus was
+                        on tasks and structure instead of visual design
+                        elements, we chose to test prototypes that were devoid
+                        of any colour or branding.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/prototypes.png" alt="" />
+                    </div>
+
+                    <p>
+                        Although we developed three different prototypes, they
+                        were all built using the redesigned app map. The nuance
+                        was in the different nav patterns used to indicate the
+                        different hierarchies. Option 1 (left) proposed a more
+                        focused and stricter hierarchy, whereas Option 2
+                        (centre), and 3 (right) facilitated quicker switching
+                        between projects and workspaces.
+                    </p>
+
+                    <p>
+                        These were just a couple of the assumptions we wanted to
+                        validate during usability testing.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/options.png" alt="" />
+                    </div>
+
+                    <p class="tagline text-m text-medium">Next steps</p>
+
+                    <p>
+                        This project is still ongoing and we're currently
+                        conducting unmoderated usability testing using Maze. The
+                        test was designed as a summative usability test so that
+                        we could benchmark prototypes against each other.
+                    </p>
+
+                    <p>
+                        We also included some standard survey questions to
+                        evaluate such as task satisfaction and ease of use. Our
+                        aim is to test with at least twenty research
+                        participants all of which are active users. From there
+                        we'll converge on a single solution and do some more
+                        moderated usability testing.
+                    </p>
+
+                    <p class="tagline text-m text-medium">
+                        A predictable cadence
+                    </p>
+
+                    <p>
+                        I wanted to call out our approach to meetings throughout
+                        this project. Lifebit has somewhat of an anti-meeting
+                        culture so we set out to define the cadence and format
+                        of our meetings at the start of the project.
+                    </p>
+
+                    <p>
+                        Instead of having meetings that aligned with the stages
+                        of the project, we opted for a more frequent cadence of
+                        bi-weekly synchs that were 15-20 minutes long. Each
+                        meeting had clear recommendations from the design team
+                        based on data gathered from previous round which fed the
+                        actions for the next round of work.
+                    </p>
+
+                    <div class="profile">
+                        <p class="name text-l text-bold">
+                            Project 2 – Detailed design and hand-off
+                        </p>
+                        <p>
+                            The second project I want to mention covers the
+                            detailed design phase and implementation phase.
+                        </p>
+                    </div>
+
+                    <p class="tagline text-m text-medium">
+                        Drafting user stories
+                    </p>
+                    <p>
+                        Usually at this point in the process, we had a clear
+                        understanding of the problem and opportunities we were
+                        going to address. With that in mind, our next step in
+                        the process was to draft user stories.
+                    </p>
+
+                    <p>
+                        As with many organisations using SCRUM, these user
+                        stories are developer focused, and not used as a tool
+                        for ideating or exploratory design. At Lifebit we use
+                        them to capture as much detail as possible so an
+                        engineer can pick it up without much fuss.
+                    </p>
+
+                    <p>
+                        They also ensure the team remains on the same page. From
+                        a design point of view it helps me align flows and
+                        relevant documentation to the corresponding user story.
+                    </p>
+
+                    <p class="tagline text-m text-medium">Detailed design</p>
+
+                    <p>
+                        The detailed design phase typically consists of
+                        designing every screen state and relevant user flow. I
+                        tend to break hand-off documents into pages and
+                        components. Generally, I will go overboard with specs
+                        and documentation as it helps me catch any missing edge
+                        cases and provides engineers with a robust starting
+                        point.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/page-specs.png" alt="" />
+                    </div>
+
+                    <p>
+                        How I create hand-off documents is an ever evolving
+                        process of feedback and refinement. One thing I've found
+                        quite helpful recently is working with engineers to
+                        develop a token library. Engineers don't have to worry
+                        about hardcoding values and designers can be sure
+                        mockups are developed to spec.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img
+                            src="img/design-process/component-specs.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <p class="tagline text-m text-medium">
+                        Implementing the new designs
+                    </p>
+
+                    <p>
+                        Once we've completed the detailed design phase, it's
+                        typical for us to schedule a design review session with
+                        the engineers and project managers. During this session,
+                        we can discuss any potential issues, solicit feedback,
+                        and ensure that everyone is aligned before moving
+                        forward.
+                    </p>
+
+                    <p>
+                        This might be the first time some engineers see the
+                        mockups. How we tend to work at Lifebit is we include a
+                        representative from the tech team during ideation and
+                        design who validates the feasibility of the designs.
+                    </p>
+
+                    <p>
+                        After delivering the work to the engineers, my focus
+                        shifts to providing design support. This role extends
+                        until the product launch, and my primary goal is to help
+                        unblock the engineers as quickly as possible.
+                    </p>
+
+                    <p>
+                        The last part of the process before launch is the design
+                        QA step. This gives the baton back to the designer to
+                        review the implemented designs and report any gaps or
+                        issues. At Lifebit, this step ends with approval or
+                        sign-off from the designer. After which it can be moved
+                        into production.
+                    </p>
+
+                    <div class="job-thumb">
+                        <img src="img/design-process/design-qa.png" alt="" />
+                    </div>
+
+                    <p class="tagline text-m text-medium">
+                        Build, measure, learn?
+                    </p>
+
+                    <p>
+                        A final word on our our current process at Lifebit.
+                        While we have a mechanism for capturing qualitative
+                        feedback during the early stages, we don't yet have a
+                        robust analytical framework in place to measure features
+                        after launch. This is a symptom of our current maturity
+                        and something we're working towards implementing.
+                    </p>
+
+                    <p>
+                        The reason I mention it is, in the past, this wouldn't
+                        have been the end of the design process. Generally we'd
+                        launch features with relevant quantitive metrics that we
+                        could review at certain milestones. From there we'd make
+                        a decision to either iterate on the feature or
+                        investigate why it hasn't worked as we expected.
+                    </p>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="modal thread-1">
+            <a class="close-button close-thread-1">
+                <span> Back</span>
+            </a>
+            <div class="container">
+                <section class="thread">
+                    <div class="profile">
+                        <p class="name text-l text-bold">Make a payment</p>
+                        <p class="tagline text-m text-medium">
+                            The Co-op Bank Payments service receives over
+                            800,000 visits a month. The payment flow is one of
+                            the bank's core experiences, catering to both
+                            first-time and regular users.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The existing payment flow had remained
+                                    largely unchanged for over 5 years, and had
+                                    significant differences depending on the
+                                    platform.
+                                </p>
+                                <p>
+                                    Initial usability testing showed that the
+                                    payment flow performed relatively well with
+                                    existing customers, but was "clunky" and
+                                    "outdated" for customers who banked
+                                    elsewhere.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/existing-payments.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The team's main hypothesis was that breaking
+                                    the flow into smaller chunks would reduce
+                                    cognitive load and simplify the payment
+                                    process for new and repeat users.
+                                </p>
+                                <p>
+                                    A competitor analysis showed that there
+                                    wasn't much variance in the industry
+                                    regarding the general steps to make a
+                                    payment, but stand-out payment journeys
+                                    focused on good interaction design to
+                                    improve the journey.
+                                </p>
+                                <p>
+                                    A task analysis was conducted to better
+                                    understand the current payment flow and seek
+                                    out opportunities for improvement.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/task-analysis.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The team mapped user flows for different
+                                    payment scenarios, such as paying a new
+                                    payee, paying an existing payee, and
+                                    scheduling a payment.
+                                </p>
+                                <p>
+                                    A new user flow was designed that broke the
+                                    service into smaller, more logical steps.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/user-flow.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    Three rounds of usability testing were
+                                    conducted, with positive results.
+                                </p>
+                                <p>
+                                    The redesigned payment service was in line
+                                    with industry conventions, scaled to
+                                    different platforms, and increased user
+                                    agency during the payment process.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <video
+                                    playsinline
+                                    autoplay
+                                    muted
+                                    autoplay
+                                    src="vid/payments.mp4"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The project took around 6 weeks from
+                                    beginning to end.
+                                </p>
+                                <p>
+                                    The redesign laid the foundation for new
+                                    functionality to be added in future
+                                    iterations.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/prototype-mobile.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description"></div>
+                            <div class="job-thumb">
+                                <img src="img/prototype-desktop.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="modal thread-2">
+            <a class="close-button close-thread-2">
+                <span>Back</span>
+            </a>
+            <div class="container">
+                <section class="thread">
+                    <div class="profile">
+                        <p class="name text-l text-bold">
+                            Information architecture (IA) redesign
+                        </p>
+                        <p class="tagline text-m text-medium">
+                            When we started this project, the bank's web and
+                            mobile apps functioned as separate product teams
+                            with little awareness of one another. The UX team
+                            used this as an opportunity to align the IA and
+                            product strategy of both apps.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The current web and mobile apps were a
+                                    tangled mess of features and services. New
+                                    features got built with little thought given
+                                    to findability or organization within the
+                                    existing architecture.
+                                </p>
+                                <p>
+                                    The team conducted a tree test to determine
+                                    what areas of the navigation needed
+                                    improvement. 30 participants were recruited
+                                    for the test, and Userzoom was used to carry
+                                    it out. This helped establish a baseline for
+                                    the IA to improve upon.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img
+                                    src="img/existing-performance.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The test consisted of 10 tasks, each
+                                    focusing on a major feature or service
+                                    within the app. Userzoom scored each task
+                                    under various findability related metrics,
+                                    providing an overall effectiveness score for
+                                    each task.
+                                </p>
+                                <p>
+                                    Overall results were a mixed bag. Some tasks
+                                    performed relatively well, which the team
+                                    wanted to preserve. Others didn't do so
+                                    well.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/treejack-before.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The team analyzed the results of the tree
+                                    test and past usability tests, finding some
+                                    common themes. They then conducted an open
+                                    card sort test to understand how users
+                                    categorize and understand the products and
+                                    services.
+                                </p>
+                                <p>
+                                    The result was a new IA that brought clarity
+                                    to categories and labels, took a
+                                    mobile-first approach by reducing the number
+                                    of top-level categories, and rearranged
+                                    categories into a flatter hierarchy, making
+                                    things easier to find.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/card-sort.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    To measure the success of the redesign, the
+                                    team conducted a second tree test using the
+                                    new IA. The first test had an average task
+                                    success of 61%, while the redesign had an
+                                    average success of 87% across the same 10
+                                    tasks.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/sitemap.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The IA redesign turned out to be a success,
+                                    simplifying the architecture of the web and
+                                    mobile apps, increasing findability and
+                                    consistency, and making labels more in line
+                                    with content guidelines and user
+                                    expectations.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/treejack-after.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    The approach the team took, using both
+                                    qualitative and quantitative methods, gave
+                                    them confidence in the results and helped
+                                    them push forward to the next stage of
+                                    product development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="modal thread-3">
+            <a class="close-button close-thread-3">
+                <span>Back</span>
+            </a>
+            <div class="container">
+                <section class="thread">
+                    <div class="profile">
+                        <p class="name text-l text-bold">
+                            Measuring UX at the Co-op Bank
+                        </p>
+                        <p class="tagline text-m text-medium">
+                            How we created an approach to measure the effect and
+                            business impact of UX in the Co-op Bank.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    By the end of 2019, we set out to tackle how
+                                    we could track and measure the user
+                                    experience across our products and services.
+                                    Traditional metrics like NPS and conversion
+                                    rates were standard currency at the bank,
+                                    but these made it hard for UX to measure the
+                                    impact of our work.
+                                </p>
+                                <p>
+                                    We created a framework for each product or
+                                    service we wanted to measure, covering the
+                                    following criteria:
+                                </p>
+                                <ul>
+                                    <li>Product or service purpose</li>
+                                    <li>Business or customer benefit</li>
+                                    <li>Outcomes: success and failure</li>
+                                    <li>What to measure: metrics and KPIs</li>
+                                    <li>How to measure: data source</li>
+                                    <li>Review period</li>
+                                </ul>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/framework.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    We facilitated workshops with stakeholders
+                                    from different products and teams within the
+                                    bank. We used the framework to brainstorm
+                                    ideas and voted on the most popular. The
+                                    outputs got everyone on the same page and
+                                    helped get stakeholders on board with the
+                                    approach.
+                                </p>
+                                <p>
+                                    After conducting a few workshops, we created
+                                    initial baselines for sales, fraud, and
+                                    payments. We worked with the data analysts
+                                    to create appropriate workspaces in Adobe
+                                    Analytics. From here we could track our
+                                    metrics and add them to our baselines.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/workshop-outputs.png" alt="" />
+                            </div>
+                            <p>
+                                The results of our work gave us a lot of
+                                encouragement to push forward with this approach
+                                and make it standard practice.
+                            </p>
+                            <p>Future plans:</p>
+                            <ul>
+                                <li>
+                                    Using baselines to increase the visibility
+                                    of UX in the bank
+                                </li>
+                                <li>
+                                    Looking across channels at multi signal
+                                    metrics (like app store reviews vs NPS)
+                                </li>
+                                <li>
+                                    Measuring the effect social media or
+                                    marketing campaigns have on our baseline
+                                    metrics and KPIs.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </dialog>
+
+        <dialog class="modal thread-4">
+            <a class="close-button close-thread-4">
+                <span>Back</span>
+            </a>
+            <div class="container">
+                <section class="thread">
+                    <div class="profile">
+                        <p class="name text-l text-bold">
+                            Building a design system for the Co-op Bank
+                        </p>
+                        <p class="tagline text-m text-medium">
+                            Before the design system, Daly, our products had no
+                            cohesive look and feel. Design files were stored
+                            locally, making collaboration and consistency a
+                            challenge. We used Sketch and Jira to move designs
+                            into development. Our design process was slow and
+                            inefficient, and our development process was costly.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    We wanted Daly to tackle three major
+                                    problems:
+                                </p>
+                                <ol>
+                                    <li>
+                                        the incohesive look and feel of our
+                                        products,
+                                    </li>
+                                    <li>
+                                        our slow inefficient design process, and
+                                    </li>
+                                    <li>
+                                        our development process was costly due
+                                        to duplicate efforts.
+                                    </li>
+                                </ol>
+                                <p>
+                                    We started by gathering user feedback about
+                                    our current design to validate the need for
+                                    a more cohesive experience. We audited every
+                                    component that made up our digital
+                                    experience to show all the glaring
+                                    inconsistencies. Finally, we spoke to
+                                    different stakeholders to gather different
+                                    points of view on how a design system could
+                                    help in their daily lives.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/current-ui.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    Before diving in, we needed to decide on our
+                                    core beliefs, so we came up with these five
+                                    principles:
+                                </p>
+                                <ol>
+                                    <li>tokens over specs,</li>
+                                    <li>clarity over depth,</li>
+                                    <li>content over graphics,</li>
+                                    <li>feedback over expertise,</li>
+                                    <li>and evidence over tradition.</li>
+                                </ol>
+                                <p>
+                                    Design tokens are a way to keep our products
+                                    and services looking and feeling the same
+                                    while making development faster. We stored
+                                    values for typography, color, spacing, and
+                                    layout as tokens. We used design tokens as a
+                                    way to maintain consistency across
+                                    third-party platforms.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/design-tokens.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    To speed up our process, we created a
+                                    component library. This Figma file houses
+                                    every style and component we use in Daly.
+                                    Designers can drag and drop components into
+                                    their own projects without reinventing the
+                                    wheel every time.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/components.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    Developers used the component library, along
+                                    with the design tokens, to create component
+                                    repositories. These repos lived on
+                                    Bitbucket, meaning other teams within the
+                                    bank could use them. We used React to build
+                                    components and Storybook for documentation.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/workflow.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    Content was a big part of Daly. Backed by
+                                    research, our content designers drafted
+                                    guidelines on how to create, write, and use
+                                    different types of content. Systemizing our
+                                    content turned Daly into a pretty effective
+                                    content designer.
+                                </p>
+                            </div>
+                            <div class="job-thumb">
+                                <img src="img/do-dont.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-content">
+                            <div class="job-description">
+                                <p>
+                                    We pitched Daly on the basis that everything
+                                    we built had a solid base, a defined
+                                    purpose, and was evidence-based. In the end,
+                                    Daly became an expansive design system that
+                                    was accessible to the entire organization.
+                                    Figma was a big enabler for the bank, and we
+                                    estimate that it saved us thousands of
+                                    pounds in duplicate efforts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </dialog>
+
+        <script>
+            const thread0 = document.querySelector(".thread-0");
+            const thread1 = document.querySelector(".thread-1");
+            const thread2 = document.querySelector(".thread-2");
+            const thread3 = document.querySelector(".thread-3");
+            const thread4 = document.querySelector(".thread-4");
+
+            const openThread0 = document.querySelector(".open-thread-0");
+            const openThread1 = document.querySelector(".open-thread-1");
+            const openThread2 = document.querySelector(".open-thread-2");
+            const openThread3 = document.querySelector(".open-thread-3");
+            const openThread4 = document.querySelector(".open-thread-4");
+
+            const closeThread0 = document.querySelector(".close-thread-0");
+            const closeThread1 = document.querySelector(".close-thread-1");
+            const closeThread2 = document.querySelector(".close-thread-2");
+            const closeThread3 = document.querySelector(".close-thread-3");
+            const closeThread4 = document.querySelector(".close-thread-4");
+
+            function performClose(modalElement) {
+                if (!modalElement || !modalElement.open) return;
+                modalElement.close();
+                const scrollY = document.body.style.top;
+                document.body.style.position = "";
+                document.body.style.top = "";
+                window.scrollTo(0, parseInt(scrollY || "0") * -1);
+            }
+
+            function showModal(modalTrigger, modalElement) {
+                if (!modalTrigger) return;
+                modalTrigger.addEventListener("click", () => {
+                    modalElement.show();
+                    const scrollY =
+                        document.documentElement.style.getPropertyValue(
+                            "--scroll-y",
+                        );
+                    const body = document.body;
+                    body.style.position = "fixed";
+                    body.style.top = `-${scrollY}`;
+                });
+
+                // Close on backdrop click
+                modalElement.addEventListener("click", (e) => {
+                    if (e.target === modalElement) {
+                        performClose(modalElement);
+                    }
+                });
+            }
+
+            function closeModal(closeTrigger, modalElement) {
+                if (!closeTrigger) return;
+                closeTrigger.addEventListener("click", () =>
+                    performClose(modalElement),
+                );
+            }
+
+            window.addEventListener("scroll", () => {
+                document.documentElement.style.setProperty(
+                    "--scroll-y",
+                    `${window.scrollY}px`,
+                );
+            });
+
+            showModal(openThread0, thread0);
+            showModal(openThread1, thread1);
+            showModal(openThread2, thread2);
+            showModal(openThread3, thread3);
+            showModal(openThread4, thread4);
+
+            closeModal(closeThread0, thread0);
+            closeModal(closeThread1, thread1);
+            closeModal(closeThread2, thread2);
+            closeModal(closeThread3, thread3);
+            closeModal(closeThread4, thread4);
+        </script>
+    </body>
+</html>
