@@ -1,0 +1,73 @@
+/* layout */
+
+.job {
+    display: flex;
+    gap: 16px;
+    margin: 64px 0;
+}
+.process .job {
+    margin: 0;
+}
+
+.process .job:first-of-type {
+    margin-top: 64px;
+}
+
+.process .job:last-of-type {
+    margin-bottom: 64px;
+}
+.job-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.process-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--backgroundTertiary);
+    margin-top: 4px;
+}
+
+.job-title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.job-description p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* colour */
+.job-logo {
+    flex-shrink: 0;
+}
+
+/* type */
+.job-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    position: relative;
+}
+.job-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+.job-term {
+    font-size: 12px;
+}
+.job-description {
+    font-size: 16px;
+}
+.work .job-content {
+    text-align: center;
+    gap: 0;
+}
+.work .job-title {
+    justify-content: center;
+    padding-bottom: 8px;
+}
