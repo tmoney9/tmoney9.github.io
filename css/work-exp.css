@@ -54,14 +54,12 @@
     position: relative;
 }
 .job-name {
-    font-size: 16px;
     font-weight: 600;
 }
 .job-term {
-    font-size: 12px;
+    font-size: 0.75em;
 }
 .job-description {
-    font-size: 16px;
 }
 .work .job-content {
     text-align: center;

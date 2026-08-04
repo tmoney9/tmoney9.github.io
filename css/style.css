@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap');
+
 /* Custom properties */
 
 @font-face {
@@ -32,15 +34,34 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'X';
+  src: url('../fonts/dd.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --textColourPrimary: #F7F7F7;
-  --textColourSecondary: #777777;
-  --backgroundDark: #1F1F1F;
+  --textColourSecondary: #A8B3BE;
+  --backgroundDark: #121417;
   --backgroundCard: #151515;
   --backgroundSecondary: hsla(214, 14%, 15%, 1);
   --backgroundTertiary: hsla(214, 14%, 20%, 1);
   --backgroundHover: hsla(214, 14%, 25%, 1);
   --backgroundModal: #0D0D0D;
+  --borderColour: rgba(255, 255, 255, 0.08);
+  --borderColourHover: rgba(255, 255, 255, 0.16);
+  --image-border: 1px solid rgba(255, 255, 255, 0.1);
+  --accentLink: #5ea9ff;
+  --accentLinkHover: #add3ff;
+  --tagBg: rgba(255, 90, 54, 0.1);
+  --tagText: #ff7b5a;
+  --tagBorder: rgba(255, 90, 54, 0.2);
+  --cardHoverColor: #ff5a36;
+  --selectionBg: #ff5a36;
+  --selectionText: #ffffff;
 
   --fontSizeXL: 22px;
   --fontSizeL: 17px;
@@ -56,7 +77,43 @@
   --gradientText2: linear-gradient(90deg, #27fff2, #e3f570);
 }
 
+html.theme-light {
+  --textColourPrimary: #1A1A1A;
+  --textColourSecondary: #5F6B7A;
+  --backgroundDark: #F5F5F5;
+  --backgroundCard: #FFFFFF;
+  --backgroundSecondary: hsla(214, 14%, 93%, 1);
+  --backgroundTertiary: hsla(214, 14%, 88%, 1);
+  --backgroundHover: hsla(214, 14%, 83%, 1);
+  --backgroundModal: rgba(0, 0, 0, 0.4);
+  --borderColour: rgba(0, 0, 0, 0.1);
+  --borderColourHover: rgba(0, 0, 0, 0.18);
+  --image-border: 1px solid rgba(0, 0, 0, 0.1);
+  --accentLink: #2563eb;
+  --accentLinkHover: #1d4ed8;
+  --tagBg: rgba(230, 74, 25, 0.06);
+  --tagText: #d84315;
+  --tagBorder: rgba(230, 74, 25, 0.12);
+  --cardHoverColor: #e64a19;
+  --selectionBg: #ff5a36;
+  --selectionText: #1A1A1A;
+}
+
 /* Globals */
+
+::selection {
+  background-color: var(--selectionBg);
+  color: var(--selectionText);
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -71,6 +128,17 @@ h4 {
   margin: 0;
 }
 
+.section-heading {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--textColourSecondary);
+  margin-top: 96px;
+  margin-bottom: 24px;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -83,12 +151,21 @@ p {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.4;
+  font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.7;
   color: var(--textColourSecondary);
   background: var(--backgroundDark);
-  font-size: var(--fontSizeL);
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
+}
+
+strong,
+b {
+  font-weight: 500;
+  color: var(--textColourPrimary);
 }
 
 /* HEADER  */
@@ -96,23 +173,27 @@ body {
 
 .container {
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 600px;
 }
 
 .header,
 .footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  max-width: 45rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 @media (min-width: 37.5rem) {
+  body {
+    font-size: 18px;
+  }
+
   .container {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .header {

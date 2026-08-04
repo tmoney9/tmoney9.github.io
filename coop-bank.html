@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Cloudflare Web Analytics -->
+        <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1d4378b65fbd41ad94e075ef98e7494f"}'></script>
+        <!-- End Cloudflare Web Analytics -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Co-op Bank: Consolidated Digital Strategy & Design System | Shane Fadden</title>
+        <meta name="description" content="Case Study: Co-op Bank | Consolidated Digital Strategy & Design System by Shane Fadden" />
+
+        <!-- Open Graph Metadata -->
+        <meta property="og:site_name" content="Shane Fadden's Portfolio" />
+        <meta property="og:title" content="Co-op Bank: Consolidated Digital Strategy & Design System | Shane Fadden" />
+        <meta property="og:description" content="Case Study: Co-op Bank | Consolidated Digital Strategy & Design System by Shane Fadden" />
+        <meta property="og:image" content="https://shanef.xyz/img/profile-pic.png" />
+        <meta property="og:url" content="https://shanef.xyz/coop-bank.html" />
+        <meta property="og:type" content="article" />
+
+        <script>
+            // Anti-FOUC: apply theme class before first paint
+            (function(){
+                try {
+                    var p = localStorage.getItem('theme-mode');
+                    var theme = (p === 'light' || p === 'dark')
+                        ? p
+                        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                    document.documentElement.classList.add('theme-' + theme);
+                } catch(e) {
+                    document.documentElement.classList.add('theme-dark');
+                }
+            })();
+        </script>
+        <link rel="stylesheet" href="css/normalise.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="css/work-exp.css" />
+        <link rel="stylesheet" href="css/work.css" />
+        <link rel="stylesheet" href="css/case-study.css" />
+        <link rel="stylesheet" href="css/theme-toggle.css" />
+        <script type="module" src="js/content-loader.js"></script>
+        <script src="js/theme-toggle.js"></script>
+        <script>
+            setInterval(async () => {
+                try {
+                    const res = await fetch(window.location.href, { method: "HEAD", cache: "no-store" });
+                    const lastModified = res.headers.get("Last-Modified");
+                    if (window._lastModified && window._lastModified !== lastModified) {
+                        window.location.reload();
+                    }
+                    window._lastModified = lastModified;
+                } catch (e) {
+                    console.error("Autorefresh polling failed", e);
+                }
+            }, 1000);
+        </script>
+        <style>
+            .case-study__cover,
+            .case-study__body {
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+            
+            .case-study__cover {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="back-nav" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="index.html" class="back-link">
+                    <svg class="artifact-side-nav-return-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                        <path d="M9.75 7.5H1.25C0.8359 7.5 0.5 7.1641 0.5 6.75C0.5 6.3359 0.8359 6 1.25 6H9.75C9.8877 6 10 5.8877 10 5.75V3.25C10 3.1123 9.8877 3 9.75 3H8C7.5859 3 7.25 2.6641 7.25 2.25C7.25 1.8359 7.5859 1.5 8 1.5H9.75C10.7148 1.5 11.5 2.2852 11.5 3.25V5.75C11.5 6.7148 10.7148 7.5 9.75 7.5Z"></path>
+                        <path d="M3.75005 10.2499C3.55815 10.2499 3.36625 10.1768 3.21975 10.0303L0.46975 7.28025C0.17675 6.98725 0.17675 6.51265 0.46975 6.21975L3.21975 3.46975C3.51275 3.17675 3.98735 3.17675 4.28025 3.46975C4.57315 3.76275 4.57325 4.23735 4.28025 4.53025L2.06055 6.74995L4.28025 8.96965C4.57325 9.26265 4.57325 9.73725 4.28025 10.0301C4.13375 10.1766 3.94195 10.2499 3.75005 10.2499Z"></path>
+                    </svg>
+                    <span>Back</span>
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <div class="theme-toggle__icon theme-toggle__icon--sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                        </svg>
+                    </div>
+                    <div class="theme-toggle__icon theme-toggle__icon--moon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"></path>
+                        </svg>
+                    </div>
+                </button>
+            </nav>
+
+            <article class="case-study">
+                <header class="case-study__cover">
+                    <h1 class="case-study-title">Co-op Bank: Digital Strategy & Design System</h1>
+                </header>
+
+                <div class="case-study__body" data-case-study="content/case-studies/Co-op Bank.md">
+                </div>
+            </article>
+        </div>
+    </body>
+</html>

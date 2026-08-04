@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Cloudflare Web Analytics -->
+        <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1d4378b65fbd41ad94e075ef98e7494f"}'></script>
+        <!-- End Cloudflare Web Analytics -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lifebit: Information Architecture & Systems Design | Shane Fadden</title>
+        <meta name="description" content="Case Study: Lifebit | Information Architecture & Systems Design by Shane Fadden" />
+
+        <!-- Open Graph Metadata -->
+        <meta property="og:site_name" content="Shane Fadden's Portfolio" />
+        <meta property="og:title" content="Lifebit: Information Architecture & Systems Design | Shane Fadden" />
+        <meta property="og:description" content="Case Study: Lifebit | Information Architecture & Systems Design by Shane Fadden" />
+        <meta property="og:image" content="https://shanef.xyz/img/lb-proposed-app-map.png" />
+        <meta property="og:url" content="https://shanef.xyz/lifebit.html" />
+        <meta property="og:type" content="article" />
+
+        <script>
+            // Anti-FOUC: apply theme class before first paint
+            (function(){
+                try {
+                    var p = localStorage.getItem('theme-mode');
+                    var theme = (p === 'light' || p === 'dark')
+                        ? p
+                        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                    document.documentElement.classList.add('theme-' + theme);
+                } catch(e) {
+                    document.documentElement.classList.add('theme-dark');
+                }
+            })();
+        </script>
+        <link rel="stylesheet" href="css/normalise.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="css/work-exp.css" />
+        <link rel="stylesheet" href="css/work.css" />
+        <link rel="stylesheet" href="css/case-study.css" />
+        <link rel="stylesheet" href="css/theme-toggle.css" />
+        <script type="module" src="js/content-loader.js"></script>
+        <script src="js/theme-toggle.js"></script>
+        <script>
+            setInterval(async () => {
+                try {
+                    const res = await fetch(window.location.href, { method: "HEAD", cache: "no-store" });
+                    const lastModified = res.headers.get("Last-Modified");
+                    if (window._lastModified && window._lastModified !== lastModified) {
+                        window.location.reload();
+                    }
+                    window._lastModified = lastModified;
+                } catch (e) {
+                    console.error("Autorefresh polling failed", e);
+                }
+            }, 1000);
+        </script>
+        <style>
+            .case-study__cover,
+            .case-study__body {
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+            
+            .case-study__cover {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="back-nav" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="index.html" class="back-link">
+                    <svg class="artifact-side-nav-return-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                        <path d="M9.75 7.5H1.25C0.8359 7.5 0.5 7.1641 0.5 6.75C0.5 6.3359 0.8359 6 1.25 6H9.75C9.8877 6 10 5.8877 10 5.75V3.25C10 3.1123 9.8877 3 9.75 3H8C7.5859 3 7.25 2.6641 7.25 2.25C7.25 1.8359 7.5859 1.5 8 1.5H9.75C10.7148 1.5 11.5 2.2852 11.5 3.25V5.75C11.5 6.7148 10.7148 7.5 9.75 7.5Z"></path>
+                        <path d="M3.75005 10.2499C3.55815 10.2499 3.36625 10.1768 3.21975 10.0303L0.46975 7.28025C0.17675 6.98725 0.17675 6.51265 0.46975 6.21975L3.21975 3.46975C3.51275 3.17675 3.98735 3.17675 4.28025 3.46975C4.57315 3.76275 4.57325 4.23735 4.28025 4.53025L2.06055 6.74995L4.28025 8.96965C4.57325 9.26265 4.57325 9.73725 4.28025 10.0301C4.13375 10.1766 3.94195 10.2499 3.75005 10.2499Z"></path>
+                    </svg>
+                    <span>Back</span>
+                </a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <div class="theme-toggle__icon theme-toggle__icon--sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                        </svg>
+                    </div>
+                    <div class="theme-toggle__icon theme-toggle__icon--moon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008"></path>
+                        </svg>
+                    </div>
+                </button>
+            </nav>
+
+            <article class="case-study">
+                <header class="case-study__cover">
+                    <h1 class="case-study-title">Lifebit: Information Architecture & Systems Design</h1>
+                </header>
+
+                <div class="case-study__body" data-case-study="content/case-studies/00-lifebit-ia-nav.md">
+                    <div class="case-study-hero case-study-hero--bleed">
+                        <div class="case-study-hero__inner">
+                            <img src="img/lifebit.png" alt="Lifebit: Information Architecture & Systems Design" class="case-study-hero__image case-study-hero__image--cover" />
+                        </div>
+                    </div>
+                    <h2>Impact</h2>
+                    <p>At Lifebit, I led the information architecture and navigation redesign for our biomedical analytics platform. As part of a quarterly OKR, we set out to solve user navigation friction and accommodate numerous new features on our roadmap. By applying <strong>Object-Oriented UX (OOUX)</strong> and systems thinking, we transformed an unscalable legacy interface into an intuitive, scalable product hierarchy. This eliminated navigational redundancy, reduced context-switching friction for scientists, and established a standardized design token library and hand-off cadence for engineering.</p>
+                    <h2>Challenges</h2>
+                    <p>The redesign was driven by qualitative user research sessions (journey mapping) and roadmap expansion needs. Researchers struggled to navigate complex multi-omic workflows, while product managers faced structural scalability limits.</p>
+                    <p>Key problem areas included:</p>
+                    <ul>
+                    <li><strong>Task resumption friction:</strong> Most participants found it difficult to pick up where they left off after logging out or switching tasks.</li>
+                    <li><strong>Navigational redundancy:</strong> Users relied on only 1–2 items in the primary sidebar, leaving remaining nav items redundant.</li>
+                    <li><strong>Illogical object relationships:</strong> Related entities lacked clear hierarchy (e.g. pipelines and interactive notebooks sat under projects, but cohorts sat at the top level without rationale).</li>
+                    <li><strong>Abstract iconography:</strong> Nav items were displayed as icon-only buttons, preventing users from linking icons to specific app features (<em>“I dread having to relearn everything, because I always forget where it is”</em>).</li>
+                    <li><strong>Unscalable workspace settings:</strong> Workspace settings had become a dumping ground for related and unrelated configuration options, leaving new features nowhere to go.</li>
+                    </ul>
+                    <h2>Project details</h2>
+                    <ul>
+                    <li><strong>Role:</strong> Lead Product Designer (Leading qualitative research, OOUX object mapping, navigation wireframing, prototype testing, and developer hand-off)</li>
+                    <li><strong>Timeframe:</strong> ~4 months (Phase 1 &amp; Phase 2)</li>
+                    <li><strong>Tools &amp; Frameworks:</strong> Figma, FigJam, Storybook, Maze, OOUX (Object-Oriented UX)</li>
+                    <li><strong>Team:</strong> Myself (Lead Designer), PM, Senior Designer, UX Researcher</li>
+                    </ul>
+                    <h2>Phase 1 — Research &amp; Information Architecture (Systems Mapping)</h2>
+                    <h3>Understanding user behaviour</h3>
+                    <p>The design process began by analyzing existing user data and running qualitative user interviews structured as a collaborative journey mapping exercise. These research sessions uncovered the mental models scientists bring to multi-omic analysis and highlighted critical friction points in their daily routines.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-journey-map.png" alt="Qualitative user journey mapping exercise" />
+                        </div>
+                        <figcaption>Qualitative user journey mapping exercise highlighting scientist friction points</figcaption>
+                    </figure>
+                    <p>In parallel, our PM brought business constraints to the table: existing technical architecture meant our underlying hierarchy needed to remain largely unchanged, and existing features would be updated in separate initiatives.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-existing-app-map.png" alt="Legacy platform architecture app map" />
+                        </div>
+                        <figcaption>Legacy platform architecture showing unscalable settings and shallow object hierarchy</figcaption>
+                    </figure>
+                    <h3>Defining scope and goals</h3>
+                    <p>Working alongside the project team, we converged on 3 core project objectives:</p>
+                    <ol>
+                    <li><strong>Create a scalable system:</strong> Future-proof our information architecture so our software can continue to scale.</li>
+                    <li><strong>Eliminate friction:</strong> Reduce the steps it takes for a user to jump back into their previous workflow.</li>
+                    <li><strong>Improve accessibility and visual design:</strong> Make it clear to users where to go and pave the way for a new visual style for the app.</li>
+                    </ol>
+                    <h3>Exploratory research</h3>
+                    <p>To gain a deeper understanding of the problem space, we conducted three primary research activities:</p>
+                    <ul>
+                    <li><strong>Heuristic analysis &amp; IA Review:</strong> Evaluated our existing navigation against best-practice usability principles to identify baseline failures.</li>
+                    <li><strong>Competitor &amp; market analysis:</strong> Evaluated how market leaders structured information, focusing on hierarchy, labeling, and nested links.</li>
+                    <li><strong>Card sorting with existing users:</strong> Ran asynchronous card sorting workshops across diverse user cohorts to uncover how researchers categorized platform content.</li>
+                    </ul>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-ia-review.png" alt="Heuristic evaluation and IA review" />
+                        </div>
+                        <figcaption>Heuristic evaluation of existing navigation and iconography</figcaption>
+                    </figure>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-card-sort.png" alt="Asynchronous card sorting workshop results" />
+                        </div>
+                        <figcaption>Asynchronous card sorting workshop results across user cohorts</figcaption>
+                    </figure>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-market-analysis.png" alt="Competitive SaaS market analysis" />
+                        </div>
+                        <figcaption>Competitive audit of navigation patterns across leading data-heavy SaaS platforms</figcaption>
+                    </figure>
+                    <p>Following research synthesis, the team gathered to confirm research sufficiency before moving into system modeling.</p>
+                    <h3>Designing a new app map (OOUX)</h3>
+                    <p>After deepening our understanding of the problem space, we modeled our system and mapped relationships between different entities (objects) using <strong>Object-Oriented UX (OOUX)</strong>. This enabled us to synthesize research findings into a clear structure aligned directly with user mental models.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-system-model.png" alt="OOUX System Model" />
+                        </div>
+                        <figcaption>Object-Oriented UX (OOUX) system model mapping core platform entities</figcaption>
+                    </figure>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-object-maps.png" alt="Detailed Object Maps" />
+                        </div>
+                        <figcaption>Detailed object relationship mapping across workspace and project objects</figcaption>
+                    </figure>
+                    <p>We mapped these objects to a redesigned application map. Compared to the legacy map, the proposed design introduced clear vertical hierarchy and logical grouping, replacing dumping grounds with scalable object spaces.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-proposed-app-map.png" alt="Redesigned Application Map" />
+                        </div>
+                        <figcaption>Redesigned application map featuring scalable vertical hierarchy</figcaption>
+                    </figure>
+                    <blockquote>
+                    <p><strong>Note on validation:</strong><br>While we would typically validate the app map using a tree test, tight project deadlines led us to consolidate testing into the navigation redesign phase, supported by high confidence from research findings.</p>
+                    </blockquote>
+                    <h2>Phase 2 — Navigation Redesign &amp; Prototyping</h2>
+                    <h3>Guiding design principles</h3>
+                    <p>We kicked off Phase 2 by analyzing visual navigation patterns across battle-tested SaaS applications, establishing 6 guiding design principles:</p>
+                    <ol>
+                    <li><strong>Preserve sidebar navigation:</strong> Sidebar navigation remains preferred for data-heavy applications.</li>
+                    <li><strong>Icons + explicit labels:</strong> Combine clear iconography with text labels for all nav items.</li>
+                    <li><strong>Account identification:</strong> Include an avatar or initials for the account link.</li>
+                    <li><strong>Contextual navigation:</strong> Implement dynamic secondary nav items based on the active page or level.</li>
+                    <li><strong>Smart landing page:</strong> Ensure initial login directs users to relevant active contexts based on where they left off.</li>
+                    <li><strong>Multi-path navigation:</strong> Provide alternative navigation shortcuts beyond the main sidebar.</li>
+                    </ol>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-content-wireframes.png" alt="Content wireframes for navigation redesign" />
+                        </div>
+                        <figcaption>Content wireframes translating design principles into spatial layouts</figcaption>
+                    </figure>
+                    <h3>Sketching and wireframes</h3>
+                    <p>We elaborated on our object maps by defining detailed object attributes: call-to-actions, user-generated content, system metadata, and nested objects. Spatially arranging these objects produced content wireframes for all required pages.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-wireframes.png" alt="Medium-Fidelity Wireframes" />
+                        </div>
+                        <figcaption>Medium-fidelity wireframes testing navigation placement and hierarchy</figcaption>
+                    </figure>
+                    <h3>Prototyping and testing</h3>
+                    <p>We developed three functional prototype directions in Figma (devoid of color or branding to focus user feedback strictly on hierarchy and tasks). All three options used the redesigned app map, with variations in navigation patterns (Option 1: strict hierarchy; Options 2 &amp; 3: rapid project/workspace switching).</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-concept-wireframes.png" alt="Concept Wireframes" />
+                        </div>
+                        <figcaption>Initial spatial layout exploration for content wireframes</figcaption>
+                    </figure>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-concept-directions.png" alt="Navigation Prototype Directions" />
+                        </div>
+                        <figcaption>Three navigation prototype directions evaluated during usability testing</figcaption>
+                    </figure>
+                    <h3>Next steps &amp; unmoderated benchmarking</h3>
+                    <p>Usability benchmarking was executed via Maze as a summative test with over 20 active research participants, combining quantitative task completion with qualitative satisfaction metrics to converge on a single production pattern.</p>
+                    <h3>Predictable team cadence</h3>
+                    <p>To maintain momentum without meeting fatigue, we established bi-weekly 15–20 minute syncs. Each sync presented data-driven recommendations from the design team, directly generating actionable backlog items for subsequent rounds.</p>
+                    <h2>Phase 3 — Detailed Design &amp; Engineering Hand-Off</h2>
+                    <h3>Drafting developer-focused user stories</h3>
+                    <p>With problem spaces validated, we drafted detailed user stories detailing screen states, edge cases, and flow documentation so engineers could pick up tickets without ambiguity.</p>
+                    <h3>Detailed design &amp; token library</h3>
+                    <p>We produced exhaustive screen specs broken into page layouts and component states. To bridge design and development, we collaborated with engineers to create a shared <strong>design token library</strong>, ensuring UI components in Storybook matched Figma mockups exactly.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-component-api.png" alt="Design System Component API" />
+                        </div>
+                        <figcaption>Design system token API and layout component specifications</figcaption>
+                    </figure>
+                    <h3>Implementation &amp; Design QA</h3>
+                    <p>During build sprints, tech representatives validated feasibility while design provided continuous support to unblock development. The process concluded with a mandatory <strong>Design QA sign-off</strong> step prior to production deployment.</p>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-component-documentation.png" alt="Storybook Component Documentation" />
+                        </div>
+                        <figcaption>Storybook component documentation and developer hand-off specs</figcaption>
+                    </figure>
+                    <h2>Results and outcomes</h2>
+                    <ul>
+                    <li><strong>Scalable IA Architecture:</strong> Future-proofed the platform hierarchy, providing dedicated homes for new roadmap features and removing settings dumping grounds.</li>
+                    <li><strong>Eliminated Navigational Friction:</strong> Added explicit labels, contextual menus, and task resumption pathways to cut context-switching overhead.</li>
+                    <li><strong>Design Token Integration:</strong> Created a shared token library synced between Figma and Storybook, eliminating hardcoded CSS values and reducing implementation bugs.</li>
+                    <li><strong>Structured Design QA Governance:</strong> Established mandatory Design QA sign-offs and bi-weekly data syncs to align engineering and design execution.</li>
+                    </ul>
+                    <figure class="case-study-supporting-figure">
+                        <div class="case-study-supporting-figure__images">
+                            <img src="img/lb-ux-framework.png" alt="System UX & Governance Framework" />
+                        </div>
+                        <figcaption>System UX measurement and design QA governance framework</figcaption>
+                    </figure>
+                    <h3>Reflection: Build, measure, learn?</h3>
+                    <p>While Lifebit established strong qualitative research mechanisms in early phases, a fully automated quantitative analytics framework post-launch remains an ongoing maturity goal. In an ideal continuous loop, features launch alongside quantitative tracking baselines to measure performance against milestones and drive iterative refinements.</p>
+                </div>
+            </article>
+        </div>
+    </body>
+</html>

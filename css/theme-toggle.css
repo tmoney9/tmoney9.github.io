@@ -1,0 +1,63 @@
+/* Theme Toggle Button */
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--textColourSecondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--backgroundTertiary);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--textColourSecondary);
+  outline-offset: 2px;
+}
+
+/* Each icon is stacked on top of each other, centered */
+.theme-toggle__icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
+}
+
+.theme-toggle__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Show the correct icon based on the active theme class on <html> */
+html.theme-light .theme-toggle__icon--moon,
+.theme-light .theme-toggle__icon--moon {
+  transform: scale(1);
+}
+
+html.theme-dark .theme-toggle__icon--sun,
+.theme-dark .theme-toggle__icon--sun {
+  transform: scale(1);
+}
+
+/* Color scheme hint for native elements (scrollbars, form controls) */
+html.theme-light {
+  color-scheme: light;
+}
+
+html.theme-dark {
+  color-scheme: dark;
+}
