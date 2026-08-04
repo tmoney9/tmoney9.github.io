@@ -49,31 +49,8 @@ function parseFrontmatter(text) {
 // Chevron SVG helper
 const chevronSVG = `<svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m5 10l7 7l7-7"/></svg>`;
 
-// Live reload watcher for markdown files
-const watchedMarkdownFiles = new Set();
-function watchForMarkdownChanges(mdPath) {
-    if (!mdPath) return;
-    watchedMarkdownFiles.add(mdPath);
-}
-
-setInterval(async () => {
-    for (const mdPath of watchedMarkdownFiles) {
-        try {
-            const res = await fetch(mdPath, { method: 'HEAD', cache: 'no-store' });
-            if (!res.ok) continue;
-            const lastModified = res.headers.get('Last-Modified');
-            if (lastModified) {
-                if (!window._mdLastModified) window._mdLastModified = {};
-                if (window._mdLastModified[mdPath] && window._mdLastModified[mdPath] !== lastModified) {
-                    window.location.reload();
-                }
-                window._mdLastModified[mdPath] = lastModified;
-            }
-        } catch (e) {
-            // Ignore transient fetch errors
-        }
-    }
-}, 1000);
+// Stub: watchForMarkdownChanges is a no-op in production
+function watchForMarkdownChanges(mdPath) {}
 
 // Load Profile
 async function loadProfile() {
@@ -426,7 +403,7 @@ async function loadThreadModals() {
                     <div class="job">
                         <div class="job-content">
                             <div class="job-description">
-                                ${parsedContent}
+                                ${parsedHtml}
                             </div>
                         </div>
                     </div>

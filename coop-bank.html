@@ -41,20 +41,7 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script type="module" src="js/content-loader.js"></script>
         <script src="js/theme-toggle.js"></script>
-        <script>
-            setInterval(async () => {
-                try {
-                    const res = await fetch(window.location.href, { method: "HEAD", cache: "no-store" });
-                    const lastModified = res.headers.get("Last-Modified");
-                    if (window._lastModified && window._lastModified !== lastModified) {
-                        window.location.reload();
-                    }
-                    window._lastModified = lastModified;
-                } catch (e) {
-                    console.error("Autorefresh polling failed", e);
-                }
-            }, 1000);
-        </script>
+
         <style>
             .case-study__cover,
             .case-study__body {
